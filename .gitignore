@@ -1,0 +1,8 @@
+*~
+
+auto-save-list/
+elpa/
+
+ido.last
+smex-items
+.mc-lists.el

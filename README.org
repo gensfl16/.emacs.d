@@ -1,0 +1,53 @@
+#TITLE: emacs 配置
+
+* 概述
+
+这是我在使用 eamcs 过程中根据自己需求对 emacs 的配置。
+
+我的系统是 Gentoo 。
+eamcs 版本是 24.5 。
+
+* 目录结构
+
+主要文件：
+.
+├── init.el                       # Emacs 从这个文件开始执行
+└── lisp                          # 各个（插件）配置文件
+    ├── init-better.el            # 与插件无关的配置
+    ├── init-company.el           # 与自动补全 company 相关
+    ├── init-elpa.el              # 初始化 ELPA
+    ├── init-multiple-cursors.el  # 多行编辑
+    ├── init-slime.el             # slime 相关
+    ├── init-smex.el              # smex 相关
+    ├── init-window-numbering.el  # 窗口跳转
+    └── init-yasnippet.el         # yasnippet 相关
+
+* 插件
+
+| 插件                | 功能               |
+|---------------------+--------------------|
+| company             | 自动补全框架       |
+| company-auctex      | LaTeX 补全后端     |
+| company-c-headers   | C 头文件补全       |
+| slime-company       | slime 补全后端     |
+| yasnippet           | 模板系统           |
+| common-lisp-snippet | common lisp 的模板 |
+| slime               | lisp 交互模式      |
+| multiple-cursors    | 多行编辑           |
+| smex                | M-x 模糊匹配       |
+| window-numbering    | 跳转子窗口         |
+
+* 说明
+
+1) 以下环境自动补全（company + yasnippet）
+   1) C/C++
+   2) Common Lisp
+   3) Emacs Lisp
+   4) Slime
+   5) Latex
+   6) 以及其他
+2) Common Lisp 的自动补全需要先开启 slime (M-x slime)
+
+* 问题
+
+1) 由于 lisp/init-elpa.el 中，require-package 写的不太好，会产生多次 package-refresh-contents 。
