@@ -16,4 +16,7 @@
 
 (ido-mode t) ;; ido
 
+;; backup file
+(setq backup-directory-alist '(("." . "~/.emacs.d/.backups")))
+
 (provide 'init-better)
