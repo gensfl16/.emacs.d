@@ -20,6 +20,7 @@ eamcs 版本是 24.5 。
     ├── init-company.el           # 与自动补全 company 相关
     ├── init-elpa.el              # 初始化 ELPA
     ├── init-multiple-cursors.el  # 多行编辑
+    ├── init-org.el  # org-mode 配置
     ├── init-slime.el             # slime 相关
     ├── init-smex.el              # smex 相关
     ├── init-window-numbering.el  # 窗口跳转
