@@ -12,7 +12,7 @@ eamcs 版本是 25.1 。
 
 主要文件：
 
-#+BEGIN_SRC
+#+BEGIN_SRC sh
 .
 ├── init.el                       # Emacs 从这个文件开始执行
 └── lisp                          # 各个（插件）配置文件
