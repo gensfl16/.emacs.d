@@ -3,6 +3,8 @@
 auto-save-list/
 elpa/
 .backups/
+eshell/
+url/
 
 ido.last
 smex-items
