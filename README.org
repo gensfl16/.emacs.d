@@ -66,10 +66,10 @@ eamcs 版本是 25.1 。
 
 * 之后计划
 
-***** TODO [-] 安装 magit
-***** DONE [x] 之前的补全是直接全局打开，之后会细化，在相应模式下打开（add-hook）
-***** TODO [-] 优化代码
-***** DONE [x] 使得能更好的阅读比较大的 C 语言项目代码（其实就是 Linux kernel source）
+***** TODO - [-] 安装 magit
+***** DONE - [x] 之前的补全是直接全局打开，之后会细化，在相应模式下打开（add-hook）
+***** TODO - [-] 优化代码
+***** DONE - [x] 使得能更好的阅读比较大的 C 语言项目代码（其实就是 Linux kernel source）
 
 * 问题
 
