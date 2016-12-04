@@ -17,10 +17,11 @@ eamcs 版本是 25.1 。
 ├── init.el                       # Emacs 从这个文件开始执行
 └── lisp                          # 各个（插件）配置文件
     ├── init-better.el            # 与插件无关的配置
-    ├── init-chinese-wbim.el      # 五笔输入法
     ├── init-company.el           # 与自动补全 company 相关
     ├── init-elpa.el              # 初始化 ELPA
     ├── init-exwm.el              # wm
+    ├── init-ggtags.el            # 代码浏览
+    ├── init-im.el                # 输入法
     ├── init-multiple-cursors.el  # 多行编辑
     ├── init-org.el               # org-mode 配置
     ├── init-slime.el             # slime 相关
@@ -42,9 +43,10 @@ eamcs 版本是 25.1 。
 | slime               | lisp 交互模式      |
 | multiple-cursors    | 多行编辑           |
 | smex                | M-x 模糊匹配       |
-| window-numbering    | 跳转子窗口 |
-| exwm                | wm            |
-| chinese-wbim        | 一个五笔输入法 |
+| window-numbering    | 跳转子窗口         |
+| exwm                | wm                 |
+| fcitx               | 使输入法更好用     |
+| ggtags              | 更好的浏览代码     |
 
 * 说明
 
@@ -53,19 +55,23 @@ eamcs 版本是 25.1 。
    2) Common Lisp
    3) Emacs Lisp
    4) Slime
-   5) Latex
-   6) 以及其他
+   5) +LaTeX+
+   6) org
+   7) asm
 2) Common Lisp 的自动补全需要先开启 slime (M-x slime)
-3) exwm，尝试尝试，下面 4 和 5 两点主要是为了更好使用这个 wm 而设置的
-4) chinese-wbim，给 emacs 配置 fcitx 没成功，所以只能选用这个了，虽然比不上 fcitx ，但也是可以的
+3) exwm +尝试尝试，下面 4 和 5 两点主要是为了更好使用这个 wm 而设置的+ 感觉不错
+4) +chinese-wbim，给 emacs 配置 fcitx 没成功，所以只能选用这个了，虽然比不上 fcitx ，但也是可以的+ [[doc/im.org][输入法]]
 5) 改用了 wombat 主题，之所以放在 init.el 第一行，是为了能更快动用上，这样可以缩短启动时显示为白色的时间（刺眼）
+6) ggtags，gtags（需安装 GNU Global）的一个拓展，使用这个来浏览代码（更好进行代码定义调用等跳转）
 
 * 之后计划
 
-1) 安装 magit
-2) 之前的补全是直接全局打开，之后会细化，在相应模式下打开（add-hook）
-3) 使得能更好的阅读比较大的 C 语言项目代码（其实就是 Linux kernel source）
+***** TODO 安装 magit
+***** DONE 之前的补全是直接全局打开，之后会细化，在相应模式下打开（add-hook）
+***** TODO 优化代码
+***** DONE 使得能更好的阅读比较大的 C 语言项目代码（其实就是 Linux kernel source）
 
 * 问题
 
-1) 由于 lisp/init-elpa.el 中，require-package 写的不太好，会产生多次 package-refresh-contents 。
+1) 由于 lisp/init-elpa.el 中，require-package 写的不太好，会产生多次 package-refresh-contents
+2) latex-mode 下的自动补全出问题，使用了 latex-mode-hook 但是不知道为什么没有执行（看上去是这样），需要手动执行

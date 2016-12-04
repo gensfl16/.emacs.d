@@ -1,0 +1,15 @@
+#+TITLE: 输入法
+
+* 过程
+1. emacs USE +gtk +gtk3
+2. emerge font-adobe-75dpi
+3. 调用输入法映射到 s-SPC ，与 C-SPC 相区分
+
+* 输入法
+- 可以使用 fcitx 和 ibus 。
+- 本来想继续使用 fcitx ，但是不知道为什么只有计算机重启后进入 emacs 才正常（应该和 exwm 无关吧）
+- 最终选择 ibus-rime
+
+* 参考
+1. [[https://wiki.archlinux.org/index.php/Fcitx#Emacs][Archlinux 上有关 emacs 使用 Fcitx 的说明]]
+2. [[http://tieba.baidu.com/p/3381050974][贴吧上有关解释与解决方法]]

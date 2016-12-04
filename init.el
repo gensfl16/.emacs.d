@@ -13,6 +13,7 @@
 (require 'init-yasnippet)
 (require 'init-window-numbering)
 (require 'init-multiple-cursors)
-;; (require 'init-fcitx)
+(require 'init-ggtags)
+(require 'init-im)
 
 (provide 'init)
