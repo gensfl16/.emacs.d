@@ -56,11 +56,11 @@
 ;; (setq exwm-workspace-display-echo-area-timeout 3)
 
 (require 'exwm-randr)
-(setq exwm-randr-workspace-output-plist '(0 "VGA1"))
+(setq exwm-randr-workspace-output-plist '(0 "VGA-1"))
 (add-hook 'exwm-randr-screen-change-hook
           (lambda ()
             (start-process-shell-command
-             "xrandr" nil "xrandr --output VGA1 --left-of LVDS1 --auto")))
+             "xrandr" nil "xrandr --output VGA-1 --left-of LVDS-1 --auto")))
 (exwm-randr-enable)
 
 ;; (require 'exwm-cm)
@@ -73,6 +73,7 @@
 
 (exwm-enable)
 
-(start-process "" nil "fcitx")
+;; (start-process "" nil "ibus-daemon" "-d" "-r" "-x")
+;; (start-process "" nil "fcitx")
 
 (provide 'init-exwm)
