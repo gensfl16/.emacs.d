@@ -47,7 +47,7 @@
 	    (my-init-company)))
 
 ;; slime-compamy
-(add-hook 'slime-lisp-mode-hook
+(add-hook 'slime-repl-mode-hook
 	  (lambda ()
 	    (my-init-company)
 	    (slime-setup '(slime-fancy slime-company))))

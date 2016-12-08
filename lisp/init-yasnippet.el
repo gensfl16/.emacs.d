@@ -37,7 +37,7 @@
 	    (my-init-yasnippet)))
 
 ;; slime-compamy
-(add-hook 'slime-lisp-mode-hook
+(add-hook 'slime-repl-mode-hook
 	  (lambda ()
 	    (my-init-yasnippet)))
 
