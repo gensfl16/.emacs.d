@@ -4,9 +4,12 @@
 
 这是我在使用 eamcs 过程中根据自己需求对 emacs 的配置。
 
-我的系统是 Gentoo 。
+我的系统是 +Gentoo+，已经转成 FreeBSD 。
 
-eamcs 版本是 25.1 。
+eamcs 版本是 25.3 。
+
+1) 插件 exwm 已经暂时不用，现在用的是 stumpwm
+2) 插件 fcitx 也暂时不用，输入法使用的是 fcitx，环境变量加入 LC_CTYPE=en_US.UTF-8，后续会启用这个插件，以带来更好的体验
 
 * 目录结构
 

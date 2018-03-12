@@ -6,6 +6,11 @@
 (setq-default cursor-type 'bar) ;; 改变光标样式
 (global-hl-line-mode t) ;; 当前行高亮
 
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(fringe-mode 1)
+
 (set-face-foreground 'region "black")
 (set-face-background 'region "lightblue")
 
@@ -30,6 +35,6 @@
 ;; backup file
 (setq backup-directory-alist '(("." . "~/.emacs.d/.backups")))
 
-(add-to-list 'default-frame-alist '(font . "Source Code Pro Light-10"))
+;; (add-to-list 'default-frame-alist '(font . "Noto Serif CJK SC ExtraLight-10"))
 
 (provide 'init-better)
