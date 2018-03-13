@@ -50,6 +50,7 @@ eamcs 版本是 25.3 。
 | exwm                | wm                 |
 | fcitx               | 使输入法更好用     |
 | ggtags              | 更好的浏览代码     |
+| yasnippet-snippets  | snippet 模板       |
 
 * 说明
 

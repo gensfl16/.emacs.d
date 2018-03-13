@@ -1,5 +1,6 @@
 (require-package 'yasnippet)
 (require-package 'common-lisp-snippets)
+(require-package 'yasnippet-snippets)
 
 (defun my-init-yasnippet ()
   (yas-minor-mode 1)
