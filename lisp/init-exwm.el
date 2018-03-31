@@ -92,7 +92,7 @@
 
 (exwm-enable)
 
-;; (start-process "" nil "ibus-daemon" "-d" "-r" "-x")
-;; (start-process "" nil "fcitx" "-d")
+;; (start-process "" nil "ibus-daemon" "-drx")
+;; (start-process "" nil "fcitx" "-d" "-r")
 
 (provide 'init-exwm)
