@@ -4,7 +4,7 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 (require 'init-elpa)
-;; (require 'init-exwm)
+(require 'init-exwm)
 (require 'init-better)
 (require 'init-org)
 (require 'init-slime)
@@ -14,7 +14,7 @@
 (require 'init-window-numbering)
 (require 'init-multiple-cursors)
 (require 'init-ggtags)
-;; (require 'init-im)
+(require 'init-im)
 
 (provide 'init)
 (custom-set-variables
@@ -24,7 +24,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ggtags multiple-cursors window-numbering common-lisp-snippets slime-company company-c-headers company-auctex smex slime company auctex))))
+    (fcitx yasnippet-snippets window-numbering smex slime-company multiple-cursors ggtags exwm company-c-headers company-auctex common-lisp-snippets))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

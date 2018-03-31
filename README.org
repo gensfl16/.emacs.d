@@ -4,7 +4,7 @@
 
 这是我在使用 eamcs 过程中根据自己需求对 emacs 的配置。
 
-我的系统是 +Gentoo+ FreeBSD 。
+我的系统是 Gentoo 。
 
 eamcs 版本是 25.3 。
 
