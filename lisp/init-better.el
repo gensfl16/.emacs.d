@@ -13,13 +13,14 @@
 (set-face-background 'region "lightblue")
 
 (setq linum-format "%d ") ;; 行号
-(global-linum-mode t)
+;; (global-linum-mode t)
 
 ;; (setq-default auto-fill-function 'do-auto-fill)
 ;; 80个字符长度
 (setq-default
- whitespace-line-column 80
+;;  whitespace-line-column 80
  whitespace-style '(face empty tabs lines-tail trailing))
+
 (global-whitespace-mode t)
 
 ;; for exwm

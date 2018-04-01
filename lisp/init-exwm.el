@@ -9,9 +9,12 @@
 (scroll-bar-mode -1)
 (fringe-mode 1)
 
-
 (setq display-time-default-load-average nil)
+(setq display-time-24hr-format t)
+(setq display-time-day-and-date t)
+
 (display-time-mode t)
+(display-battery-mode t)
 
 (ido-mode 1)
 
@@ -51,25 +54,25 @@
 
 (define-key exwm-mode-map [?\C-q] #'exwm-input-send-next-key)
 
-(setq exwm-input-set-simulation-keys
-      '(
-	;; movement
-	([?\C-b] . [left])
-	([?\C-f] . [right])
-	([?\C-p] . [up])
-	([?\C-n] . [down])
-	([?\C-a] . [home])
-	([?\C-e] . [end])
-	([?\M-v] . [prior])
-	([?\C-v] . [next])
-	([?\C-d] . [delete])
-	([?\C-k] . [S-end delete])
-	;; cut/paste
-	([?\C-w] . [?\C-x])
-	([?\M-w] . [?\C-c])
-	([?\C-y] . [?\C-v])
-	;; search
-	([?\C-s] . [?\C-f])))
+;; (setq exwm-input-set-simulation-keys
+;;       '(
+;; 	;; movement
+;; 	([?\C-b] . [left])
+;; 	([?\C-f] . [right])
+;; 	([?\C-p] . [up])
+;; 	([?\C-n] . [down])
+;; 	([?\C-a] . [home])
+;; 	([?\C-e] . [end])
+;; 	([?\M-v] . [prior])
+;; 	([?\C-v] . [next])
+;; 	([?\C-d] . [delete])
+;; 	([?\C-k] . [S-end delete])
+;; 	;; cut/paste
+;; 	([?\C-w] . [?\C-x])
+;; 	([?\M-w] . [?\C-c])
+;; 	([?\C-y] . [?\C-v])
+;; 	;; search
+;; 	([?\C-s] . [?\C-f])))
 
 ;; (setq exwm-workspace-minibuffer-position 'bottom)
 ;; (setq exwm-workspace-display-echo-area-timeout 3)
@@ -87,8 +90,8 @@
 ;; (setq exwm-cm-opacity 80)
 ;; (exwm-cm-enable)
 
-;; (require 'exwm-systemtray)
-;; (exwm-systemtray-enable)
+(require 'exwm-systemtray)
+(exwm-systemtray-enable)
 
 (exwm-enable)
 
