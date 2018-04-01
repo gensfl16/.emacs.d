@@ -8,7 +8,7 @@
 
 1) USE="X acl alsa dbus gif gpm gtk gtk3 inotify jpeg png ssl svg tiff xft xpm zlib"
 2) 使用插件 exwm 做为 WM，暂时不用 stumpwm
-3) 插件 fcitx 也暂时不用，输入法使用的是 fcitx，环境变量加入 LC_CTYPE=en_US.UTF-8，后续会启用这个插件，以带来更好的体验
+3) 插件 fcitx 也暂时不用，目前输入法使用的是 ibus，+环境变量加入 LC_CTYPE=en_US.UTF-8，+后续会启用这个插件，以带来更好的体验
 
 * 目录结构
 

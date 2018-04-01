@@ -1,19 +1,22 @@
 #+TITLE: 中文及输入法
 
 * 中文显示
-- emacs USE +xft
+- USE="xft" emerge emacs
 
 * 输入法
-1) fcitx
-  - emerge font-adobe-75dpi
-  - 调用输入法映射到 s-SPC ，与 C-SPC 相区分
+1) emerge -av font-adobe-75dpi （原因不知道，想在 emacs 中使用输入法，无论是 fcitx 还是 ibus，都得安装这个包）
 
-2) ibus
+2) fcitx
+  - ~/.config/fcitx 中 config 和 profile 配置
+  - config 中，调用输入法映射到 s-SPC ，与 C-SPC 相区分，将 CTRL_SPACE 修改成 SUPER_SPACE
+  - profile 列表中，将 wubi 后面的 False 改成 True
+
+3) ibus
   - 使用 exwm 时，fcitx 有问题，加载 exwm 后无法使用 fcitx，不加载时可以使用，因此使用 ibus
   - 最终选择 ibus-rime
-    1) ibus-setup 添加 Chinese/rime 以及 English
-    2) 在 ~/.xinitrc 中加入 "ibus-daemon -drx"，用于启动 ibus，在 exwm 配置文件中启动有问题
-    3) 将 [[default.custom.yaml][patch]] ，放入 ~/.config/ibus/rime/ 目录即可使用 wubi86
+    1) 在 [[xinitrc][~/.xinitrc]] 中加入 "ibus-daemon -drx"，用于启动 ibus，在 exwm 配置文件中启动有问题
+    2) 执行 ibus-setup ，添加 Chinese/rime 以及 English
+    3) 将 [[default.custom.yaml][patch]] ，放入 ~/.config/ibus/rime/ 目录，ibus 重启即可使用 wubi86
 
 * 参考
 1. [[https://wiki.archlinux.org/index.php/Fcitx#Emacs][Archlinux 上有关 emacs 使用 Fcitx 的说明]]
