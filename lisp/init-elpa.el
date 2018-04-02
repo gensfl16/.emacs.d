@@ -5,15 +5,19 @@
 	     '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-;; 多次 package-refresh-contents 以及 package 无法自动更新
-;; 后续再解决
+;; package 无法自动更新，实际上，这个功能并不好，因为更新需要联网，但不能保证每次启动都有网络
+
+(defvar *package-refresh-already* 0)
 (defun require-package (package)
   "Install given PACKAGE."
   (if (package-installed-p package)
       t
-    (progn
-      (package-refresh-contents)
-      (package-install package))))
+    (if (= 1 *package-refresh-already*)
+	(package-install package)
+      (progn
+	(package-refresh-contents)
+	(setq *package-refresh-already* 1)
+	(package-install package)))))
 
 (package-initialize)
 
