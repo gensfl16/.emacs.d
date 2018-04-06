@@ -4,19 +4,19 @@
 ;; (exwm-config-default)
 
 ;; (exwm-config-misc)
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(fringe-mode 1)
+;; (menu-bar-mode -1)
+;; (tool-bar-mode -1)
+;; (scroll-bar-mode -1)
+;; (fringe-mode 1)
 
-(setq display-time-default-load-average nil)
-(setq display-time-24hr-format t)
-(setq display-time-day-and-date t)
+;; (setq display-time-default-load-average nil)
+;; (setq display-time-24hr-format t)
+;; (setq display-time-day-and-date t)
 
-(display-time-mode t)
-(display-battery-mode t)
+;; (display-time-mode t)
+;; (display-battery-mode t)
 
-(ido-mode 1)
+;; (ido-mode 1)
 
 (require 'exwm)
 

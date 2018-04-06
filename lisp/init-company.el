@@ -53,8 +53,8 @@
 	    (my-init-company)
 	    (slime-setup '(slime-fancy slime-company))))
 
-;; LaTeX no
-(add-hook 'latex-mode-hook
+;; LaTeX
+(add-hook 'LaTeX-mode-hook
 	  (lambda ()
 	    (my-init-company)
 	    (company-auctex-init)))

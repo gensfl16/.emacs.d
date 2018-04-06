@@ -4,7 +4,7 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 (require 'init-elpa)
-(require 'init-exwm)
+;; (require 'init-exwm)
 (require 'init-better)
 (require 'init-org)
 (require 'init-slime)

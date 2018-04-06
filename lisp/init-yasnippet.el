@@ -42,8 +42,8 @@
 	  (lambda ()
 	    (my-init-yasnippet)))
 
-;; LaTeX no
-(add-hook 'latex-mode-hook
+;; LaTeX
+(add-hook 'LaTeX-mode-hook
 	  (lambda ()
 	    (my-init-yasnippet)))
 

@@ -3,11 +3,10 @@
 (setq-default cursor-type 'bar) ;; 改变光标样式
 (global-hl-line-mode t) ;; 当前行高亮
 
-;; exwm
-;; (menu-bar-mode -1)
-;; (tool-bar-mode -1)
-;; (scroll-bar-mode -1)
-;; (fringe-mode 1)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(fringe-mode 1)
 
 (set-face-foreground 'region "black")
 (set-face-background 'region "lightblue")
@@ -23,14 +22,14 @@
 
 (global-whitespace-mode t)
 
-;; for exwm
-;; (setq display-time-24hr-format t)
-;; (setq display-time-day-and-date t)
+(setq display-time-default-load-average nil)
+(setq display-time-24hr-format t)
+(setq display-time-day-and-date t)
 
-;; (display-time-mode t)
-;; (display-battery-mode t)
+(display-time-mode t)
+(display-battery-mode t)
 
-;; (ido-mode t) ;; ido
+(ido-mode 1) ;; ido
 
 ;; backup file
 (setq backup-directory-alist '(("." . "~/.emacs.d/.backups")))
