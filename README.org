@@ -85,6 +85,4 @@
 
 * 问题
 
-1) +由于 lisp/init-elpa.el 中，require-package 写的不太好，会产生多次 package-refresh-contents+
-2) +latex-mode 下的自动补全出问题，使用了 latex-mode-hook 但是不知道为什么没有执行（看上去是这样），需要手动执行+
-3) exwm 退出时会关掉 emacs 的 server，应该是 kill-emacs-hook 问题？
+1) exwm 退出时会关掉 emacs 的 server，应该是 kill-emacs-hook 问题？
