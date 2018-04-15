@@ -7,7 +7,7 @@
 我的系统是 Gentoo ，eamcs 版本是 26.1_rc1 。
 
 1) USE="X acl alsa gif gpm gtk3 inotify jpeg motif png ssl svg tiff wide-int xft xpm zlib -Xaw3d (-aqua) -athena (-cairo) -dbus -dynamic-loading -games -gconf -gfile -gsettings -gtk -gzip-el -imagemagick -kerberos -libxml2 -livecd -m17n-lib -pax_kernel (-selinux) -sound -source -toolkit-scroll-bars"
-2) +使用插件 exwm 做为 WM，暂时不用 stumpwm+
+2) +使用插件 exwm 做为 WM，暂时不用 stumpwm+ 使用 fvwm
 3) 插件 fcitx 也暂时不用，目前输入法使用的是 ibus， +环境变量加入 LC_CTYPE=en_US.UTF-8，+ 后续会启用这个插件，以带来更好的体验
 
 * 目录结构
