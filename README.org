@@ -76,12 +76,6 @@
 ****** TODO [-] init-yasnippet.el
 ***** DONE [x] 使得能更好的阅读比较大的 C 语言项目代码（其实就是 Linux kernel source）
 ***** TODO [-] 修改 exwm 使得退出时不 kill-emacs
-****** TODO [-] kill-emacs-hook 工作机理
-****** TODO [-] exwm 如何修改 kill-emacs-hook
-****** TODO [-] 修改代码 / exwm 更新
-***** TODO [-] 输入体验改进
-****** TODO [-] fcitx.el 工作机理
-****** TODO [-] 适配 ibus
 
 * 问题
 
