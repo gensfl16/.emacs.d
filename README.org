@@ -8,7 +8,7 @@
 
 1) USE="X acl alsa gif gpm gtk3 inotify jpeg motif png ssl svg tiff wide-int xft xpm zlib -Xaw3d (-aqua) -athena (-cairo) -dbus -dynamic-loading -games -gconf -gfile -gsettings -gtk -gzip-el -imagemagick -kerberos -libxml2 -livecd -m17n-lib -pax_kernel (-selinux) -sound -source -toolkit-scroll-bars"
 2) +使用插件 exwm 做为 WM，暂时不用 stumpwm+ 使用 fvwm
-3) 插件 fcitx 也暂时不用，目前输入法使用的是 ibus， +环境变量加入 LC_CTYPE=en_US.UTF-8，+ 后续会启用这个插件，以带来更好的体验
++3) 插件 fcitx 也暂时不用，目前输入法使用的是 ibus， 环境变量加入 LC_CTYPE=en_US.UTF-8， 后续会启用这个插件，以带来更好的体验+
 
 * 目录结构
 
@@ -21,14 +21,14 @@
     ├── init-better.el            # 与插件无关的配置
     ├── init-company.el           # 与自动补全 company 相关
     ├── init-elpa.el              # 初始化 ELPA
-    ├── init-exwm.el              # wm
+    ├── init-exwm.el              # wm // 目前使用，暂时不用
     ├── init-ggtags.el            # 代码浏览
     ├── init-im.el                # 输入法
     ├── init-multiple-cursors.el  # 多行编辑
-    ├── init-org.el               # org-mode 配置
+    ├── init-org.el               # org-mode 配置 // emacs 26.1_rc1 对这个配置会报错，暂时不用
     ├── init-slime.el             # slime 相关
     ├── init-smex.el              # smex 相关
-    ├── init-window-numbering.el  # 窗口跳转
+    ├── init-window-numbering.el  # 窗口跳转 // 启动 emacs 时，这个插件有问题，暂时不用
     └── init-yasnippet.el         # yasnippet 相关
 #+END_SRC
 
@@ -62,10 +62,11 @@
    6) org
    7) asm
 2) Common Lisp 的自动补全需要开启 slime (M-x slime)，同时 slime-repl-mode 要自动补全也需要打开任意的 lisp 文件，两者内在逻辑关系有空在理清
-3) exwm +尝试尝试，下面 4 和 5 两点主要是为了更好使用这个 wm 而设置的+ 感觉不错
-4) +chinese-wbim，给 emacs 配置 fcitx 没成功，所以只能选用这个了，虽然比不上 fcitx ，但也是可以的+ [[doc/im.org][输入法]]
-5) 改用了 wombat 主题，之所以放在 init.el 第一行，是为了能更快动用上，这样可以缩短启动时显示为白色的时间（刺眼）
-6) ggtags，gtags（需安装 GNU Global）的一个拓展，使用这个来浏览代码（更好进行代码定义调用等跳转）
+3) [[doc/im.org][输入法]]
+4) 改用了 wombat 主题，之所以放在 init.el 第一行，是为了能更快动用上，这样可以缩短启动时显示为白色的时间（刺眼），白色问题，如果以 daemon 启动则不会有，
+   但问题是非系统启动 emacs daemon ，关机时，localmount 会有问题："in use bus fuser finds nothing"，
+   /etc/conf.d/localmount 中 no_unmounts 添加 /var 应该可以修复，暂时没尝试
+5) ggtags，gtags（需安装 GNU Global）的一个拓展，使用这个来浏览代码（更好进行代码定义调用等跳转）
 
 * 之后计划
 
