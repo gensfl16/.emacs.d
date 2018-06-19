@@ -5,6 +5,7 @@ elpa/
 .backups/
 eshell/
 url/
+pyim/
 
 ido.last
 smex-items
