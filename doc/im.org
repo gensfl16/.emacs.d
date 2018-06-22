@@ -23,6 +23,9 @@
     2) 执行 ibus-setup ，添加 Chinese/rime 以及 English
     3) 将 [[default.custom.yaml][patch]] ，放入 ~/.config/ibus/rime/ 目录，ibus 重启即可使用 wubi86
 
+4) exim
+   - 安装相应插件，.xinitrc 中使用 exim 和 xim
+
 * 参考
 1. [[https://wiki.archlinux.org/index.php/Fcitx#Emacs][Archlinux 上有关 emacs 使用 Fcitx 的说明]]
 2. [[http://tieba.baidu.com/p/3381050974][贴吧上有关解释与解决方法]]

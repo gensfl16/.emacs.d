@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: full template of ctex article class
+# key: ctexart
+# --
+\documentclass{ctexart}
+\usepackage{authblk}
+
+\author{$1}
+\title{$2}
+
+\affil{$3}
+
+\begin{document}
+\maketitle
+
+$0
+\end{document}

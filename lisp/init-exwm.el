@@ -1,5 +1,5 @@
-(require-package 'exwm)
-(require-package 'xelb)
+;; (require-package 'exwm)
+;; (require-package 'xelb)
 
 ;; (exwm-config-default)
 
@@ -17,6 +17,8 @@
 ;; (display-battery-mode t)
 
 ;; (ido-mode 1)
+
+(server-start)
 
 (require 'exwm)
 
@@ -95,7 +97,10 @@
 
 (exwm-enable)
 
-;; (start-process "" nil "ibus-daemon" "-drx")
-;; (start-process "" nil "fcitx" "-d" "-r")
+(require 'init-im)
+
+;; For pdf-tools
+(require-package 'pdf-tools)
+(pdf-tools-install)
 
 (provide 'init-exwm)

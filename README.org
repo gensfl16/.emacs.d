@@ -4,10 +4,15 @@
 
 这是我在使用 eamcs 过程中根据自己需求对 emacs 的配置。
 
-我的系统是 Gentoo ，eamcs 版本是 26.1_rc1 。
+我的系统是 Gentoo ，eamcs 版本是 26.1。
 
-1) USE="X acl alsa gif gpm gtk3 inotify jpeg motif png ssl svg tiff wide-int xft xpm zlib -Xaw3d (-aqua) -athena (-cairo) -dbus -dynamic-loading -games -gconf -gfile -gsettings -gtk -gzip-el -imagemagick -kerberos -libxml2 -livecd -m17n-lib -pax_kernel (-selinux) -sound -source -toolkit-scroll-bars"
-2) +使用插件 exwm 做为 WM，暂时不用 stumpwm+ 使用 fvwm
+1) USE="X acl alsa gif gpm gtk3 imagemagick inotify jpeg lcms motif png sound ssl svg threads tiff wide-int xft xpm zlib -Xaw3d (-aqua) -athena (-cairo) -dbus -dynamic-loading -games -gconf -gfile -gsettings -gtk -gzip-el -kerberos -libxml2 -livecd -m17n-lib -mailutils (-selinux) -source -systemd -toolkit-scroll-bars -xwidgets"
+2) 使用插件 exwm 做为 WM，使用 [[https://github.com/ch11ng][ch11ng]] 关于 exwm 全套（exwm、xelb、exim、emacs-leim-extra）。对于 exwm 来讲，
+使用 exim 才能正常使用 emacs 的输入法。尝试过几个 emacs 的输入法，必须得搭配 exim 才能在 X11 应用中使用 emacs 的
+输入法。组合尝试，emacs-leim-extra 相对来讲与之配合最好。没尝试使用 emacs 本身自带的输入法（习惯使用五笔），应该也是可以的。
+如果不考虑 X11 应用，pyim + pyim-wbdict，是有选词框跟着输入光标的，更好用，但是启动速度太慢，而且在 X11 应用中，选词框没了，
+也就无法正常使用。4 个插件，前两个可以从 elpa 安装，后两个就只能从其 github 上下载了。目前全部使用 github 上的，毕竟 exwm 还
+是有些问题的，github 上的修复比较快，十分佩服 ch11ng。
 +3) 插件 fcitx 也暂时不用，目前输入法使用的是 ibus， 环境变量加入 LC_CTYPE=en_US.UTF-8， 后续会启用这个插件，以带来更好的体验+
 
 * 目录结构
@@ -21,7 +26,7 @@
     ├── init-better.el            # 与插件无关的配置
     ├── init-company.el           # 与自动补全 company 相关
     ├── init-elpa.el              # 初始化 ELPA
-    ├── init-exwm.el              # wm // 目前使用，暂时不用
+    ├── init-exwm.el              # wm
     ├── init-ggtags.el            # 代码浏览
     ├── init-im.el                # 输入法
     ├── init-multiple-cursors.el  # 多行编辑
@@ -34,22 +39,27 @@
 
 * 插件
 
-| 插件                | 功能               |
-|---------------------+--------------------|
-| company             | 自动补全框架       |
-| company-auctex      | LaTeX 补全后端     |
-| company-c-headers   | C 头文件补全       |
-| slime-company       | slime 补全后端     |
-| yasnippet           | 模板系统           |
-| common-lisp-snippet | common lisp 的模板 |
-| slime               | lisp 交互模式      |
-| multiple-cursors    | 多行编辑           |
-| smex                | M-x 模糊匹配       |
-| window-numbering    | 跳转子窗口         |
-| exwm                | wm                 |
-| fcitx               | 使输入法更好用     |
-| ggtags              | 更好的浏览代码     |
-| yasnippet-snippets  | snippet 模板       |
+| 插件                | 功能                   |
+|---------------------+------------------------|
+| company             | 自动补全框架           |
+| company-auctex      | LaTeX 补全后端         |
+| company-c-headers   | C 头文件补全           |
+| slime-company       | slime 补全后端         |
+| yasnippet           | 模板系统               |
+| common-lisp-snippet | common lisp 的模板     |
+| slime               | lisp 交互模式          |
+| multiple-cursors    | 多行编辑               |
+| smex                | M-x 模糊匹配           |
+| window-numbering    | 跳转子窗口             |
+| exwm                | wm                     |
+| fcitx               | 使输入法更好用         |
+| ggtags              | 更好的浏览代码         |
+| yasnippet-snippets  | snippet 模板           |
+| xelb                | 支持 exwm              |
+| exim                | 支持 exwm 下中文输入   |
+| emacs-leim-extra    | 五笔输入法             |
+| pdf-tools           | PDF 工具，DocView 替代 |
+
 
 * 说明
 
@@ -77,6 +87,7 @@
 ****** TODO [-] init-yasnippet.el
 ***** DONE [x] 使得能更好的阅读比较大的 C 语言项目代码（其实就是 Linux kernel source）
 ***** TODO [-] 修改 exwm 使得退出时不 kill-emacs
+***** TODO [-] 学习中文输入法实现，看能不能在 exwm 环境下，在 X 应用中使得选词框跟着输入光标
 
 * 问题
 

@@ -5,7 +5,10 @@ elpa/
 .backups/
 eshell/
 url/
-pyim/
+site-lisp/exwm/
+site-lisp/exim/
+site-lisp/xelb/
+site-lisp/emacs-leim-extra/
 
 ido.last
 smex-items
