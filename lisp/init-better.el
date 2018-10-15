@@ -11,7 +11,7 @@
 (set-face-foreground 'region "black")
 (set-face-background 'region "lightblue")
 
-(setq linum-format "%d ") ;; 行号
+;; (setq linum-format "%d ") ;; 行号
 ;; (global-linum-mode t)
 
 ;; (setq-default auto-fill-function 'do-auto-fill)
