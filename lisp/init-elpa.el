@@ -17,7 +17,8 @@
       (progn
 	(package-refresh-contents)
 	(setq *package-refresh-already* 1)
-	(package-install package)))))
+	(package-install package))))
+  (require package))
 
 (package-initialize)
 
