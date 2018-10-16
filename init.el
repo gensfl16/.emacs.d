@@ -11,15 +11,15 @@
 ;; (require 'init-exwm)
 (require 'init-better)
 ;; (require 'init-org)
-;; (require 'init-slime)
+(require 'init-slime)
 (require 'init-smex)
-;; (require 'init-company)
-;; (require 'init-yasnippet)
+(require 'init-company)
+(require 'init-yasnippet)
 ;; (require 'init-window-numbering)
-;; (require 'init-multiple-cursors)
+(require 'init-multiple-cursors)
 ;; (require 'init-ggtags)
 ;; (require 'init-im)
-(require 'init-lsp)
+;; (require 'init-lsp)
 
 (provide 'init)
 (custom-set-variables
@@ -27,7 +27,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (lsp-clangd lsp-mode smex))))
+ '(package-selected-packages (quote (eglot lsp-ui company-lsp lsp-clangd lsp-mode smex))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

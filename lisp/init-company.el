@@ -13,7 +13,8 @@
   ;; company 与 yasnippet 无法同时补全，但是在 auto-complete 下是可以的，
   ;; 所以用这个方法替代，即有需要时按键补全 yasnippet
   ;; 奇怪的是加入 company-backends 也不行
-  (global-set-key (kbd "C-c y") 'company-yasnippet))
+  (global-set-key (kbd "C-c y") 'company-yasnippet)
+  )
 
 ;; c
 (add-hook 'c-mode-hook
