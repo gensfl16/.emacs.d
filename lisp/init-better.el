@@ -11,8 +11,6 @@
 (set-face-foreground 'region "black")
 (set-face-background 'region "lightblue")
 
-;; (setq linum-format "%d ") ;; 行号
-;; (global-linum-mode t)
 (setq-default display-line-numbers-width 2)
 (setq display-line-numbers-current-absolute t)
 
