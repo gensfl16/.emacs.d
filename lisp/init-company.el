@@ -7,7 +7,7 @@
 
 (defun my-init-company ()
   (company-mode 1)
-  (linum-mode 1)
+  (display-line-numbers-mode)
   (setq company-idle-delay 0)
   (setq company-minimum-prefix-length 2)
   ;; company 与 yasnippet 无法同时补全，但是在 auto-complete 下是可以的，

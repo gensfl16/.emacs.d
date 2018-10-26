@@ -13,6 +13,8 @@
 
 ;; (setq linum-format "%d ") ;; 行号
 ;; (global-linum-mode t)
+(setq-default display-line-numbers-width 2)
+(setq display-line-numbers-current-absolute t)
 
 ;; (setq-default auto-fill-function 'do-auto-fill)
 ;; 80个字符长度
