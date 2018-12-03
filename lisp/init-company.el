@@ -17,21 +17,21 @@
   )
 
 ;; c
-(add-hook 'c-mode-hook
-	  (lambda ()
-	    (my-init-company)
-	    ;; company-backends : company-c-headers
-	    (with-eval-after-load 'company
-	      (progn
-		(add-to-list 'company-backends 'company-c-headers)))))
+;;; (add-hook 'c-mode-hook
+;;; 	  (lambda ()
+;;; 	    (my-init-company)
+;;; 	    ;; company-backends : company-c-headers
+;;; 	    (with-eval-after-load 'company
+;;; 	      (progn
+;;; 		(add-to-list 'company-backends 'company-c-headers)))))
 ;; c++
-(add-hook 'c++-mode-hook
-	  (lambda ()
-	    (my-init-company)
-	    ;; company-backends : company-c-headers
-	    (with-eval-after-load 'company
-	      (progn
-		(add-to-list 'company-backends 'company-c-headers)))))
+;;; (add-hook 'c++-mode-hook
+;;; 	  (lambda ()
+;;; 	    (my-init-company)
+;;; 	    ;; company-backends : company-c-headers
+;;; 	    (with-eval-after-load 'company
+;;; 	      (progn
+;;; 		(add-to-list 'company-backends 'company-c-headers)))))
 
 ;; lisp
 (add-hook 'lisp-mode-hook

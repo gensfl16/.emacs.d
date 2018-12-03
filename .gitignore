@@ -13,3 +13,5 @@ site-lisp/emacs-leim-extra/
 ido.last
 smex-items
 .mc-lists.el
+
+.lsp-session
