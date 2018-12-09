@@ -7,14 +7,11 @@
 
 ;;; lsp-mode NEXT
 (require 'lsp)
-(add-hook 'c-mode-hook 'lsp)
+;;; (add-hook 'c-mode-hook 'lsp)
+;;; (add-hook 'c++-mode-hook 'lsp)
 (lsp-register-client
  (make-lsp-client :new-connection (lsp-stdio-connection "clangd")
-		  :major-modes '(c-mode)
-		  :server-id 'clangd))
-(lsp-register-client
- (make-lsp-client :new-connection (lsp-stdio-connection "clangd")
-		  :major-modes '(c++-mode)
+		  :major-modes '(c-mode c++-mode)
 		  :server-id 'clangd))
 ;;; (setq lsp-auto-configure nil)
 
