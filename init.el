@@ -18,7 +18,7 @@
 ;; (require 'init-window-numbering)
 (require 'init-multiple-cursors)
 (require 'init-ggtags)
-;; (require 'init-im)
+(require 'init-im)
 (require 'init-lsp)
 
 (provide 'init)

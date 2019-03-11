@@ -1,11 +1,12 @@
-(register-input-method
- "chinese-wubi86" "Chinese-GB" 'quail-use-package
- "五" "汉字输入::五笔::"
- "quail/wubi86")
-(setq default-input-method 'chinese-wubi86)
+;; pyim + pyim-wbdict
+(require-package 'pyim)
+(require-package 'pyim-wbdict)
+(require-package 'posframe)
 
-(require 'exim)
-(push ?\C-\\ exwm-input-prefix-keys)
-(add-hook 'exwm-init-hook 'exim-start)
+(setq pyim-page-tooltip 'posframe)
+(setq pyim-page-length 5)
+(setq pyim-default-scheme 'wubi)
+(pyim-wbdict-v98-enable)
+(setq default-input-method "pyim")
 
 (provide 'init-im)

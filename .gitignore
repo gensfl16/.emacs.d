@@ -5,6 +5,7 @@ elpa/
 .backups/
 eshell/
 url/
+pyim/
 site-lisp/exwm/
 site-lisp/exim/
 site-lisp/xelb/
@@ -14,4 +15,4 @@ ido.last
 smex-items
 .mc-lists.el
 
-.lsp-session
+.lsp-session*

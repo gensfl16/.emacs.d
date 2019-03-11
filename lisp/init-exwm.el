@@ -1,4 +1,4 @@
-;; (require-package 'exwm)
+(require-package 'exwm)
 ;; (require-package 'xelb)
 
 ;; (exwm-config-default)
@@ -18,7 +18,7 @@
 
 ;; (ido-mode 1)
 
-(server-start)
+;; (server-start)
 
 (require 'exwm)
 
@@ -95,12 +95,16 @@
 (require 'exwm-systemtray)
 (exwm-systemtray-enable)
 
+(require 'exwm-xim)
+(exwm-xim-enable)
+(push ?\C-\\ exwm-input-prefix-keys)
+
 (exwm-enable)
 
-(require 'init-im)
+;; (require 'init-im)
 
 ;; For pdf-tools
-(require-package 'pdf-tools)
-(pdf-tools-install)
+;; (require-package 'pdf-tools)
+;; (pdf-tools-install)
 
 (provide 'init-exwm)
