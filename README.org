@@ -8,8 +8,8 @@
 
 1) USE="X acl alsa gif gpm imagemagick inotify jpeg lcms motif png sound ssl svg threads tiff wide-int xft xpm zlib -Xaw3d (-aqua) -athena (-cairo) -dbus -dynamic-loading -games -gconf -gfile -gsettings -gtk -gtk2 -gzip-el -kerberos -libxml2 -livecd -m17n-lib -mailutils (-selinux) -source -systemd -toolkit-scroll-bars -xwidgets"
 2) 使用插件 exwm（[[https://github.com/ch11ng][ch11ng]]）作为 WM。对于 exwm 来讲，使用 exim 才能正常使用 emacs 的输入法。目前 exwm 内置了 exim。
-之前尝试过 emacs-leim-extra 配合挺好（其他没尝试，习惯五笔）。之前 pyim 对于 X11 应用效果不好，但是目前对此进行了改进，
-因此目前使用的输入法方案为：pyim + pyim-wbdict。
+   之前尝试过 emacs-leim-extra 配合挺好（其他没尝试，习惯五笔）。之前 pyim 对于 X11 应用效果不好，但是目前对此进行了改进，
+   因此目前使用的输入法方案为：pyim + pyim-wbdict。
 3) +插件 fcitx 也暂时不用，目前输入法使用的是 ibus， 环境变量加入 LC_CTYPE=en_US.UTF-8， 后续会启用这个插件，以带来更好的体验+
 
 * 目录结构
