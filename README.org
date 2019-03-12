@@ -29,7 +29,7 @@
     ├── init-lsp.el               # lsp mode
     ├── init-multiple-cursors.el  # 多行编辑
     ├── init-org.el               # org-mode 配置 // emacs 26.1_rc1 对这个配置会报错，暂时不用
-    ├── init-slime.el             # slime 相关
+    ├── init-sly.el               # sly 相关
     ├── init-smex.el              # smex 相关
     ├── init-window-numbering.el  # 窗口跳转 // 启动 emacs 时，这个插件有问题，暂时不用
     └── init-yasnippet.el         # yasnippet 相关
@@ -37,30 +37,29 @@
 
 * 插件
 
-| 插件                | 功能                   |
-|---------------------+------------------------|
-| company             | 自动补全框架           |
-| company-auctex      | LaTeX 补全后端         |
-| company-c-headers   | C 头文件补全           |
-| slime-company       | slime 补全后端         |
-| yasnippet           | 模板系统               |
-| common-lisp-snippet | common lisp 的模板     |
-| slime               | lisp 交互模式          |
-| multiple-cursors    | 多行编辑               |
-| smex                | M-x 模糊匹配           |
-| window-numbering    | 跳转子窗口             |
-| exwm                | wm                     |
-| fcitx               | 使输入法更好用         |
-| ggtags              | 更好的浏览代码         |
-| yasnippet-snippets  | snippet 模板           |
-| xelb                | 支持 exwm              |
-| exim                | 支持 exwm 下中文输入   |
-| emacs-leim-extra    | 五笔输入法             |
-| pdf-tools           | PDF 工具，DocView 替代 |
-| lsp-mode            | lsp                    |
-| lsp-clangd          | lsp, clangd            |
-| pyim                | 输入法                 |
-| pyim                | pyim 输入法五笔        |
+| 插件                 | 功能                   |
+|----------------------+------------------------|
+| company              | 自动补全框架           |
+| company-auctex       | LaTeX 补全后端         |
+| company-c-headers    | C 头文件补全           |
+| slime-company        | slime 补全后端         |
+| yasnippet            | 模板系统               |
+| common-lisp-snippet  | common lisp 的模板     |
+| sly（替换原先slime） | lisp 交互模式          |
+| multiple-cursors     | 多行编辑               |
+| smex                 | M-x 模糊匹配           |
+| window-numbering     | 跳转子窗口             |
+| exwm                 | wm                     |
+| fcitx                | 使输入法更好用         |
+| ggtags               | 更好的浏览代码         |
+| yasnippet-snippets   | snippet 模板           |
+| xelb                 | 支持 exwm              |
+| exim                 | 支持 exwm 下中文输入   |
+| emacs-leim-extra     | 五笔输入法             |
+| pdf-tools            | PDF 工具，DocView 替代 |
+| lsp-mode             | lsp                    |
+| pyim                 | 输入法                 |
+| pyim                 | pyim 输入法五笔        |
 
 
 * 说明
@@ -73,12 +72,14 @@
    5) LaTeX
    6) org
    7) asm
-2) Common Lisp 的自动补全需要开启 slime (M-x slime)，同时 slime-repl-mode 要自动补全也需要打开任意的 lisp 文件，两者内在逻辑关系有空在理清
+2) +Common Lisp 的自动补全需要开启 slime (M-x slime)，同时 slime-repl-mode 要自动补全也需要打开任意的 lisp 文件，两者内在逻辑关系有空在理清+
+   使用 sly，Common Lisp 补全需要打开 sly。原先 slime 同配置补全失败，所以换成 sly
 3) [[doc/im.org][输入法]]
 4) 改用了 wombat 主题，之所以放在 init.el 第一行，是为了能更快动用上，这样可以缩短启动时显示为白色的时间（刺眼），白色问题，如果以 daemon 启动则不会有，
    但问题是非系统启动 emacs daemon ，关机时，localmount 会有问题："in use bus fuser finds nothing"，
    /etc/conf.d/localmount 中 no_unmounts 添加 /var 应该可以修复，暂时没尝试
 5) ggtags，gtags（需安装 GNU Global）的一个拓展，使用这个来浏览代码（更好进行代码定义调用等跳转）
+6) LSP：尝试使用，但是 clangd 补全 C 效果不好
 
 * 之后计划
 
@@ -90,6 +91,7 @@
 ***** DONE [x] 使得能更好的阅读比较大的 C 语言项目代码（其实就是 Linux kernel source）
 ***** TODO [-] 修改 exwm 使得退出时不 kill-emacs
 ***** TODO [-] 学习中文输入法实现，看能不能在 exwm 环境下，在 X 应用中使得选词框跟着输入光标
+***** TODO [-] 尝试 LSP：ccls
 
 * 问题
 

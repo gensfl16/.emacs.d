@@ -1,11 +1,8 @@
 (require-package 'company)
 (require-package 'company-auctex)
 (require-package 'company-c-headers)
-(require-package 'slime-company)
 
-;; (add-hook 'after-init-hook 'global-company-mode)
-
-(defun my-init-company ()
+(defun my/init-company ()
   (company-mode 1)
   (display-line-numbers-mode)
   (setq company-idle-delay 0)
@@ -16,53 +13,21 @@
   (global-set-key (kbd "C-c y") 'company-yasnippet)
   )
 
-;; c
-;;; (add-hook 'c-mode-hook
-;;; 	  (lambda ()
-;;; 	    (my-init-company)
-;;; 	    ;; company-backends : company-c-headers
-;;; 	    (with-eval-after-load 'company
-;;; 	      (progn
-;;; 		(add-to-list 'company-backends 'company-c-headers)))))
-;; c++
-;;; (add-hook 'c++-mode-hook
-;;; 	  (lambda ()
-;;; 	    (my-init-company)
-;;; 	    ;; company-backends : company-c-headers
-;;; 	    (with-eval-after-load 'company
-;;; 	      (progn
-;;; 		(add-to-list 'company-backends 'company-c-headers)))))
+(let* ((hooks '(lisp-mode-hook
+		emacs-lisp-mode-hook
+		asm-mode-hook
+		sly-mrepl-mode-hook
+		LaTeX-mode-hook
+		org-mode-hook)))
+  (dolist (hook hooks)
+    (add-hook hook 'my/init-company)))
 
-;; lisp
-(add-hook 'lisp-mode-hook
-	  (lambda ()
-	    (my-init-company)))
+(add-hook 'LaTeX-mode-hook 'company-auctex-init)
 
-;; elisp
-(add-hook 'emacs-lisp-mode-hook
-	  (lambda ()
-	    (my-init-company)))
+(defun my/c-or-c++-mode-company ()
+  (my/init-company)
+  (add-to-list 'company-backends 'company-c-headers))
 
-;; asm
-(add-hook 'asm-mode-hook
-	  (lambda ()
-	    (my-init-company)))
-
-;; slime-compamy
-(add-hook 'slime-repl-mode-hook
-	  (lambda ()
-	    (my-init-company)
-	    (slime-setup '(slime-fancy slime-company))))
-
-;; LaTeX
-(add-hook 'LaTeX-mode-hook
-	  (lambda ()
-	    (my-init-company)
-	    (company-auctex-init)))
-
-;; org
-(add-hook 'org-mode-hook
-	  (lambda ()
-	    (my-init-company)))
+(add-hook 'c-mode-common-hook 'my/c-or-c++-mode-company)
 
 (provide 'init-company)

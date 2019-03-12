@@ -11,7 +11,7 @@
 ;; (require 'init-exwm)
 (require 'init-better)
 ;; (require 'init-org)
-(require 'init-slime)
+(require 'init-sly)
 (require 'init-smex)
 (require 'init-company)
 (require 'init-yasnippet)
@@ -19,6 +19,6 @@
 (require 'init-multiple-cursors)
 (require 'init-ggtags)
 (require 'init-im)
-(require 'init-lsp)
+;; (require 'init-lsp)
 
 (provide 'init)
