@@ -30,6 +30,7 @@
   (my/init-company)
   (add-to-list 'company-backends 'company-c-headers))
 
-;; (add-hook 'c-mode-common-hook 'my/c-or-c++-mode-company)
+(add-hook 'c-mode-hook 'my/c-or-c++-mode-company)
+(add-hook 'c++-mode-hook 'my/c-or-c++-mode-company)
 
 (provide 'init-company)

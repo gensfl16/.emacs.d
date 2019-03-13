@@ -9,7 +9,8 @@
   (define-key yas-minor-mode-map (kbd "TAB") nil)
   (define-key yas-minor-mode-map (kbd "C-c k") 'yas-expand))
 
-(let* ((hooks '(c-mode-common-hook
+(let* ((hooks '(c-mode-hook
+		c++-mode-hook
 		lisp-mode-hook
 		emacs-lisp-mode-hook
 		asm-mode-hook

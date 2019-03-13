@@ -19,6 +19,7 @@
 (require 'init-multiple-cursors)
 ;; (require 'init-ggtags)
 (require 'init-im)
-(require 'init-lsp)
+;; (require 'init-lsp)
+;; (require 'init-eglot)
 
 (provide 'init)
