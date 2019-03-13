@@ -13,9 +13,10 @@
 		lisp-mode-hook
 		emacs-lisp-mode-hook
 		asm-mode-hook
-		sly-mrepl-mode-hook
+		;; sly-mrepl-mode-hook
 		LaTeX-mode-hook
-		org-mode-hook)))
+		org-mode-hook
+		cmake-mode-hook)))
   (dolist (hook hooks)
     (add-hook hook 'my/init-yasnippet)))
 

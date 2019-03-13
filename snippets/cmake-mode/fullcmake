@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: full template of cmake
+# key: fullcmake
+# --
+cmake_minimum_required(VERSION 3.13)
+
+set(CMAKE_C_COMPILER clang)
+set(CMAKE_CXX_COMPILER clang++)
+
+project($1)
+aux_source_directory(${2:.} ${3:DIR_SRCS})
+$0
+add_executable(\${PROJECT_NAME} \${$3})
