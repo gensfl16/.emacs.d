@@ -15,5 +15,6 @@
 ;; (require 'init-im)
 ;; (require 'init-lsp)
 ;; (require 'init-eglot)
+(require 'init-key-bindings)
 
 (provide 'init)
