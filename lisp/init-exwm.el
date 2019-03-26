@@ -52,7 +52,10 @@
 		  (number-sequence 0 9))
 	([?\s-&] . (lambda (command)
 		     (interactive (list (read-shell-command "$ ")))
-		     (start-process-shell-command command nil command)))))
+		     (start-process-shell-command command nil command)))
+	([s-f2] . (lambda ()
+		    (interactive)
+		    (start-process "" nil "/usr/bin/slock")))))
 
 (define-key exwm-mode-map [?\C-q] #'exwm-input-send-next-key)
 
@@ -80,11 +83,11 @@
 ;; (setq exwm-workspace-display-echo-area-timeout 3)
 
 (require 'exwm-randr)
-(setq exwm-randr-workspace-output-plist '(0 "HDMI1"))
+(setq exwm-randr-workspace-output-plist '(0 "HDMI-1"))
 (add-hook 'exwm-randr-screen-change-hook
           (lambda ()
             (start-process-shell-command
-             "xrandr" nil "xrandr --output HDMI1 --left-of eDP1 --auto")))
+             "xrandr" nil "xrandr --output HDMI-1 --left-of eDP-1 --auto")))
 (exwm-randr-enable)
 
 ;; (require 'exwm-cm)
