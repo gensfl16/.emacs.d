@@ -107,7 +107,7 @@
 (require 'init-im)
 
 ;; For pdf-tools
-;; (require-package 'pdf-tools)
-;; (pdf-tools-install)
+(require-package 'pdf-tools)
+(pdf-tools-install)
 
 (provide 'init-exwm)
