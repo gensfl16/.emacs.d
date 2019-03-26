@@ -108,6 +108,7 @@
 
 ;; For pdf-tools
 (require-package 'pdf-tools)
-(pdf-tools-install)
+;; (pdf-tools-install)
+(pdf-loader-install)
 
 (provide 'init-exwm)
