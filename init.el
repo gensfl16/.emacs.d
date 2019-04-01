@@ -16,5 +16,6 @@
 ;; (require 'init-lsp)
 ;; (require 'init-eglot)
 (require 'init-key-bindings)
+(require 'init-magit)
 
 (provide 'init)
