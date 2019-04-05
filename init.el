@@ -3,6 +3,7 @@
 (require 'init-elpa)
 ;; (require 'init-exwm)
 (require 'init-better)
+(require 'init-font)
 (require 'init-ui)
 ;; (require 'init-org)
 (require 'init-sly)
@@ -17,5 +18,6 @@
 ;; (require 'init-eglot)
 (require 'init-key-bindings)
 (require 'init-magit)
+(require 'init-eshell)
 
 (provide 'init)

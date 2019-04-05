@@ -20,6 +20,7 @@
 		sly-mrepl-mode-hook
 		LaTeX-mode-hook
 		org-mode-hook
+		eshell-mode-hook
 		cmake-mode-hook)))
   (dolist (hook hooks)
     (add-hook hook 'my/init-company)))
