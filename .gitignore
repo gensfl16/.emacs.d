@@ -11,6 +11,7 @@ site-lisp/exim/
 site-lisp/xelb/
 site-lisp/emacs-leim-extra/
 transient/
+tramp
 
 ido.last
 smex-items
