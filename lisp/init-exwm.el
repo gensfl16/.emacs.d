@@ -1,23 +1,6 @@
 (require-package 'exwm)
 ;; (require-package 'xelb)
 
-;; (exwm-config-default)
-
-;; (exwm-config-misc)
-;; (menu-bar-mode -1)
-;; (tool-bar-mode -1)
-;; (scroll-bar-mode -1)
-;; (fringe-mode 1)
-
-;; (setq display-time-default-load-average nil)
-;; (setq display-time-24hr-format t)
-;; (setq display-time-day-and-date t)
-
-;; (display-time-mode t)
-;; (display-battery-mode t)
-
-;; (ido-mode 1)
-
 ;; (server-start)
 
 (require 'exwm)
@@ -83,17 +66,26 @@
 ;; (setq exwm-workspace-display-echo-area-timeout 3)
 
 (require 'exwm-randr)
-(setq exwm-randr-workspace-output-plist '(0 "HDMI-1"))
-(add-hook 'exwm-randr-screen-change-hook
-          (lambda ()
-            (start-process-shell-command
-             "xrandr" nil "xrandr --output HDMI-1 --left-of eDP-1 --auto")))
-(exwm-randr-enable)
 
-;; (require 'exwm-cm)
-;; (setq window-system-default-frame-alist '((x . ((alpha . 100)))))
-;; (setq exwm-cm-opacity 80)
-;; (exwm-cm-enable)
+(defun exwm-change-screen-hook ()
+  (let ((xrandr-output-reaexp "\n\\([^ ]+\\) connected ")
+	default-output)
+    (with-temp-buffer
+      (call-process "xrandr" nil t nil)
+      (goto-char (point-min))
+      (re-search-forward xrandr-output-reaexp nil 'noerror)
+      (setq default-output (match-string 1))
+      (forward-line)
+      (if (not (re-search-forward xrandr-output-reaexp nil 'noerror))
+	  (call-process "xrandr" nil nil nil "--output" default-output "--auto")
+	(call-process
+	 "xrandr" nil nil nil
+	 "--output" (match-string 1)
+	 "--left-of" default-output "--auto")
+	(setq exwm-randr-workspace-monitor-plist (list 0 (match-string 1)))))))
+
+(add-hook 'exwm-randr-screen-change-hook 'exwm-change-screen-hook)
+(exwm-randr-enable)
 
 (require 'exwm-systemtray)
 (exwm-systemtray-enable)
