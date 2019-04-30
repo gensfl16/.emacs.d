@@ -6,10 +6,6 @@ elpa/
 eshell/
 url/
 pyim/
-site-lisp/exwm/
-site-lisp/exim/
-site-lisp/xelb/
-site-lisp/emacs-leim-extra/
 transient/
 tramp
 
