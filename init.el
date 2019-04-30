@@ -1,6 +1,11 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 (require 'init-elpa)
+
+(require-module "aweshell")
+(require-module "exwm")
+(require-module "xelb")
+
 ;; (require 'init-exwm)
 (require 'init-better)
 (require 'init-font)

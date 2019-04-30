@@ -1,6 +1,3 @@
-(add-hook 'eshell-mode-hook
-	  (lambda ()
-	    (setq pcomplete-cycle-completions nil)
-	    (setq eshell-cmpl-cycle-completions nil)))
+(require 'aweshell)
 
 (provide 'init-eshell)

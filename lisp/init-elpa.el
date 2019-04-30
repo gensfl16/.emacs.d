@@ -20,6 +20,11 @@
 	(package-install package))))
   (require package))
 
+(defun require-module (package)
+  "Add load path of modules"
+  (let ((dir (concat "site-lisp/" package)))
+    (add-to-list 'load-path (expand-file-name dir user-emacs-directory))))
+
 (package-initialize)
 
 (provide 'init-elpa)

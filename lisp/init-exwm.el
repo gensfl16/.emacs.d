@@ -1,4 +1,4 @@
-(require-package 'exwm)
+;; (require-package 'exwm)
 ;; (require-package 'xelb)
 
 ;; (server-start)
