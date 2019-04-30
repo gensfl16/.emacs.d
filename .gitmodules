@@ -1,3 +1,9 @@
 [submodule "site-lisp/aweshell"]
 	path = site-lisp/aweshell
 	url = git@github.com:manateelazycat/aweshell.git
+[submodule "site-lisp/exwm"]
+	path = site-lisp/exwm
+	url = git@github.com:ch11ng/exwm.git
+[submodule "site-lisp/xelb"]
+	path = site-lisp/xelb
+	url = git@github.com:ch11ng/xelb.git
