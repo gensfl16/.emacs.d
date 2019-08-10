@@ -7,6 +7,8 @@ eshell/
 url/
 tramp
 
+/pyim/
+/transient/
 /backup/
 /recentf
 

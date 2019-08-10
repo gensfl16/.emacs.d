@@ -52,9 +52,6 @@
 [submodule "site-lisp/multiple-cursors"]
 	path = site-lisp/multiple-cursors
 	url = git@github.com:magnars/multiple-cursors.el.git
-[submodule "site-lisp/magit"]
-	path = site-lisp/magit
-	url = git@github.com:magit/magit.git
 [submodule "site-lisp/libs/dash"]
 	path = site-lisp/libs/dash
 	url = git@github.com:magnars/dash.el.git
