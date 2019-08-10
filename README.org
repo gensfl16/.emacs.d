@@ -4,17 +4,16 @@
 
 这是我在使用 eamcs 过程中根据自己需求对 emacs 的配置。
 
-我的系统是 Gentoo ，eamcs 版本是 26.2。
+我的系统是 Gentoo ，eamcs 版本是 emacs-vcs 27.0.9999。
 
-1) USE="X acl alsa gif gpm imagemagick inotify jpeg lcms motif png sound ssl svg threads tiff wide-int xft xpm zlib -Xaw3d (-aqua) -athena (-cairo) -dbus -dynamic-loading -games -gconf -gfile -gsettings -gtk -gtk2 -gzip-el -kerberos -libxml2 -livecd -m17n-lib -mailutils (-selinux) -source -systemd -toolkit-scroll-bars -xwidgets"
-2) 使用插件 exwm（[[https://github.com/ch11ng][ch11ng]]）作为 WM。对于 exwm 来讲，使用 exim 才能正常使用 emacs 的输入法。目前 exwm 内置了 exim。
+1) USE="X acl alsa gif gmp gpm imagemagick inotify jpeg lcms libxml2 motif png sound ssl svg threads tiff wide-int xft xpm zlib -Xaw3d (-aqua) -athena (-cairo) -dbus -dynamic-loading -games -gconf -gfile -gsettings -gtk -gtk2 -gzip-el -json -kerberos -livecd -m17n-lib -mailutils (-selinux) -source -systemd -toolkit-scroll-bars -xwidgets"
+2) 使用 submodule 来管理插件，所有插件安装目录为 site-lisp，具体各个目录作用：
+   1) site-lisp/libs：插件所用的信赖包
+   2) emacs-gnu-elpa：从 elpa 上下载来的
+   3) 其他：插件
+3) 使用插件 exwm（[[https://github.com/ch11ng][ch11ng]]）作为 WM。对于 exwm 来讲，使用 exim 才能正常使用 emacs 的输入法。目前 exwm 内置了 exim。
    之前尝试过 emacs-leim-extra 配合挺好（其他没尝试，习惯五笔）。之前 pyim 对于 X11 应用效果不好，但是目前对此进行了改进，
    因此目前使用的输入法方案为：pyim + pyim-wbdict。
-3) +插件 fcitx 也暂时不用，目前输入法使用的是 ibus， 环境变量加入 LC_CTYPE=en_US.UTF-8， 后续会启用这个插件，以带来更好的体验+
-4) 开始使用 submodule 来管理插件
-   1) aweshell
-   2) exwm
-   3) xelb
 
 * 目录结构
 
@@ -23,10 +22,9 @@
 #+BEGIN_SRC sh
 .
 ├── init.el                       # Emacs 从这个文件开始执行
-└── lisp                          # 各个（插件）配置文件
+└── lisp                          # 各个（插件）配置文件，以下内容需要修改
     ├── init-better.el            # 与插件无关的配置
     ├── init-company.el           # 与自动补全 company 相关
-    ├── init-elpa.el              # 初始化 ELPA
     ├── init-exwm.el              # wm
     ├── init-ggtags.el            # 代码浏览
     ├── init-im.el                # 输入法
@@ -35,8 +33,11 @@
     ├── init-org.el               # org-mode 配置 // emacs 26.1_rc1 对这个配置会报错，暂时不用
     ├── init-sly.el               # sly 相关
     ├── init-smex.el              # smex 相关
-    ├── init-window-numbering.el  # 窗口跳转 // 启动 emacs 时，这个插件有问题，暂时不用
     └── init-yasnippet.el         # yasnippet 相关
+└── site-lisp                     # submodule 管理的各个插件
+    ├── emacs-gnu-epla            # elpa 上下载的包
+    ├── libs                      # 插件信赖的包
+    └── submodule                 # 指代一系列目录，各个插件
 #+END_SRC
 
 * 插件
@@ -68,35 +69,8 @@
 
 * 说明
 
-1) 以下环境自动补全（company + yasnippet）
-   1) C/C++
-   2) Common Lisp
-   3) Emacs Lisp
-   4) Slime
-   5) LaTeX
-   6) org
-   7) asm
-2) +Common Lisp 的自动补全需要开启 slime (M-x slime)，同时 slime-repl-mode 要自动补全也需要打开任意的 lisp 文件，两者内在逻辑关系有空在理清+
-   使用 sly，Common Lisp 补全需要打开 sly。原先 slime 同配置补全失败，所以换成 sly
-3) [[doc/im.org][输入法]]
-4) 改用了 wombat 主题，之所以放在 init.el 第一行，是为了能更快动用上，这样可以缩短启动时显示为白色的时间（刺眼），白色问题，如果以 daemon 启动则不会有，
-   但问题是非系统启动 emacs daemon ，关机时，localmount 会有问题："in use bus fuser finds nothing"，
-   /etc/conf.d/localmount 中 no_unmounts 添加 /var 应该可以修复，暂时没尝试
-5) ggtags，gtags（需安装 GNU Global）的一个拓展，使用这个来浏览代码（更好进行代码定义调用等跳转）
-6) LSP：尝试使用，但是 clangd 补全 C 效果不好
-
 * 之后计划
 
-***** TODO [-] 安装 magit
-***** DONE [x] 之前的补全是直接全局打开，之后会细化，在相应模式下打开（add-hook）
-***** TODO [-] 优化代码，使用宏来修改配置文件
-****** TODO [-] init-company.el
-****** TODO [-] init-yasnippet.el
-***** DONE [x] 使得能更好的阅读比较大的 C 语言项目代码（其实就是 Linux kernel source）
-***** TODO [-] 修改 exwm 使得退出时不 kill-emacs
-***** TODO [-] 学习中文输入法实现，看能不能在 exwm 环境下，在 X 应用中使得选词框跟着输入光标
-***** TODO [-] 尝试 LSP：ccls
+***** TODO [-] 完成所有 submodule 下载和配置
 
 * 问题
-
-1) exwm 退出时会关掉 emacs 的 server，应该是 kill-emacs-hook 问题？

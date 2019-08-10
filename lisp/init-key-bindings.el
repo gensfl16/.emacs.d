@@ -3,6 +3,45 @@
 ;; (global-set-key [f7] ')
 ;; (global-set-key [f8] ')
 (global-set-key [f9] 'kill-this-buffer)
-(global-set-key [f12] 'eshell)
+;; (global-set-key [f12] 'eshell)
+
+(require 'lazy-load)
+
+(lazy-load-unset-keys
+ '("C-z"))
+
+(lazy-load-global-keys
+ '(
+   ("s-n" . aweshell-new)
+   ("s-h" . aweshell-toggle)
+   ("s-x s-x" . aweshell-dedicated-toggle)
+   ;; ("C-l" . clear-scrollback)
+   )
+ "init-eshell")
+
+(lazy-load-global-keys
+ '(
+   ("d" . bing-dict-brief)
+   ("s" . insert-translated-name-insert)
+   ("t" . toggle-company-english-helper)
+   )
+ "init-translated"
+ "C-z")
+
+(lazy-load-global-keys
+ '(
+   ("e" . mc/edit-lines)
+   ("n" . mc/mark-next-like-this)
+   ("p" . mc/mark-next-like-this)
+   ("a" . mc/mark-all-like-this)
+   )
+ "init-multiple-cursors"
+ "s-z")
+
+(lazy-load-global-keys
+ '(
+   ("s-g" . magit-status)
+   )
+ "init-magit")
 
 (provide 'init-key-bindings)

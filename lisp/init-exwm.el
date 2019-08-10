@@ -96,11 +96,11 @@
 
 (exwm-enable)
 
-(require 'init-im)
+;; (require 'init-im)
 
 ;; For pdf-tools
-(require-package 'pdf-tools)
+;; (require-package 'pdf-tools)
 ;; (pdf-tools-install)
-(pdf-loader-install)
+;; (pdf-loader-install)
 
 (provide 'init-exwm)

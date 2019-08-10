@@ -7,3 +7,63 @@
 [submodule "site-lisp/xelb"]
 	path = site-lisp/xelb
 	url = git@github.com:ch11ng/xelb.git
+[submodule "site-lisp/lazycat-theme"]
+	path = site-lisp/lazycat-theme
+	url = git@github.com:manateelazycat/lazycat-theme.git
+[submodule "site-lisp/lazy-load"]
+	path = site-lisp/lazy-load
+	url = git@github.com:manateelazycat/lazy-load.git
+[submodule "site-lisp/pdf-tools"]
+	path = site-lisp/pdf-tools
+	url = git@github.com:politza/pdf-tools.git
+[submodule "site-lisp/libs/tablist"]
+	path = site-lisp/libs/tablist
+	url = git@github.com:politza/tablist.git
+[submodule "site-lisp/company-mode"]
+	path = site-lisp/company-mode
+	url = git@github.com:company-mode/company-mode.git
+[submodule "site-lisp/company-english-helper"]
+	path = site-lisp/company-english-helper
+	url = git@github.com:manateelazycat/company-english-helper.git
+[submodule "site-lisp/insert-translated-name"]
+	path = site-lisp/insert-translated-name
+	url = git@github.com:manateelazycat/insert-translated-name.git
+[submodule "site-lisp/bing-dict"]
+	path = site-lisp/bing-dict
+	url = git@github.com:cute-jumper/bing-dict.el.git
+[submodule "site-lisp/pyim"]
+	path = site-lisp/pyim
+	url = git@github.com:tumashu/pyim.git
+[submodule "site-lisp/libs/pyim-wbdict"]
+	path = site-lisp/libs/pyim-wbdict
+	url = git@github.com:tumashu/pyim-wbdict.git
+[submodule "site-lisp/libs/pyim-greatdict"]
+	path = site-lisp/libs/pyim-greatdict
+	url = git@github.com:tumashu/pyim-greatdict.git
+[submodule "site-lisp/libs/posframe"]
+	path = site-lisp/libs/posframe
+	url = git@github.com:tumashu/posframe.git
+[submodule "site-lisp/libs/async"]
+	path = site-lisp/libs/async
+	url = git@github.com:jwiegley/emacs-async.git
+[submodule "site-lisp/snails"]
+	path = site-lisp/snails
+	url = git@github.com:manateelazycat/snails.git
+[submodule "site-lisp/multiple-cursors"]
+	path = site-lisp/multiple-cursors
+	url = git@github.com:magnars/multiple-cursors.el.git
+[submodule "site-lisp/magit"]
+	path = site-lisp/magit
+	url = git@github.com:magit/magit.git
+[submodule "site-lisp/libs/dash"]
+	path = site-lisp/libs/dash
+	url = git@github.com:magnars/dash.el.git
+[submodule "site-lisp/libs/hydra"]
+	path = site-lisp/libs/hydra
+	url = git@github.com:abo-abo/hydra.git
+[submodule "site-lisp/libs/transient"]
+	path = site-lisp/libs/transient
+	url = git@github.com:magit/transient.git
+[submodule "site-lisp/libs/with-editor"]
+	path = site-lisp/libs/with-editor
+	url = git@github.com:magit/with-editor.git

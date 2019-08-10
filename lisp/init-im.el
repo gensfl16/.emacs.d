@@ -1,7 +1,7 @@
 ;; pyim + pyim-wbdict
-(require-package 'pyim)
-(require-package 'pyim-wbdict)
-(require-package 'posframe)
+(require 'pyim)
+(require 'pyim-wbdict)
+(require 'posframe)
 
 (setq pyim-page-tooltip 'posframe)
 (setq pyim-page-length 5)
