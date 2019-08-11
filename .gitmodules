@@ -70,3 +70,7 @@
 [submodule "site-lisp/yasnippet"]
 	path = site-lisp/yasnippet
 	url = git@github.com:joaotavora/yasnippet.git
+[submodule "site-lisp/libs/auctex"]
+	path = site-lisp/libs/auctex
+	url = https://git.savannah.gnu.org/git/emacs/elpa.git
+	branch = externals/auctex
