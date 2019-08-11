@@ -1,5 +1,5 @@
 (require 'company)
-;; (require-package 'company-auctex)
+(require-package 'company-auctex)
 ;; (require-package 'company-c-headers)
 ;; (require-package 'cmake-mode)
 
@@ -18,7 +18,7 @@
 		emacs-lisp-mode-hook
 		asm-mode-hook
 ;; 		sly-mrepl-mode-hook
-;; 		LaTeX-mode-hook
+		LaTeX-mode-hook
 		org-mode-hook
 		eshell-mode-hook
 ;; 		cmake-mode-hook
