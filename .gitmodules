@@ -64,3 +64,13 @@
 [submodule "site-lisp/libs/with-editor"]
 	path = site-lisp/libs/with-editor
 	url = git@github.com:magit/with-editor.git
+[submodule "site-lisp/libs/company-auctex"]
+	path = site-lisp/libs/company-auctex
+	url = git@github.com:alexeyr/company-auctex.git
+[submodule "site-lisp/yasnippet"]
+	path = site-lisp/yasnippet
+	url = git@github.com:joaotavora/yasnippet.git
+[submodule "site-lisp/libs/auctex"]
+	path = site-lisp/libs/auctex
+	url = https://git.savannah.gnu.org/git/emacs/elpa.git
+	branch = externals/auctex

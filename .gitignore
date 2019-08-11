@@ -11,6 +11,7 @@ tramp
 /transient/
 /backup/
 /recentf
+/site-lisp/magit/
 
 ido.last
 smex-items
