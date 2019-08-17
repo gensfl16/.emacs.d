@@ -1,7 +1,19 @@
 (require 'company)
-(require-package 'company-auctex)
+;; (require 'company-auctex)
+;; (require 'auctex)
+;; (require 'preview)
 ;; (require-package 'company-c-headers)
 ;; (require-package 'cmake-mode)
+
+;; (load "auctex.el" nil t t)
+;; (load "preview-latex.el" nil t t)
+;; (setq TeX-auto-save t)
+;; (setq TeX-parse-self t)
+;; (setq-default TeX-master nil)
+;; (dolist (hook (list
+;; 	       'LaTeX-mode-hook
+;; 	       'latex-mode-hook))
+;;   (add-hook hook 'turn-on-reftex))
 
 (defun my/init-company ()
   (company-mode 1)
@@ -18,15 +30,15 @@
 		emacs-lisp-mode-hook
 		asm-mode-hook
 ;; 		sly-mrepl-mode-hook
-		LaTeX-mode-hook
+;; 		LaTeX-mode-hook
 		org-mode-hook
-		eshell-mode-hook
+;; 		eshell-mode-hook
 ;; 		cmake-mode-hook
 		)))
   (dolist (hook hooks)
     (add-hook hook 'my/init-company)))
 
-(add-hook 'LaTeX-mode-hook 'company-auctex-init)
+;; (add-hook 'LaTeX-mode-hook 'company-auctex-init)
 
 (defun my/c-or-c++-mode-company ()
   (my/init-company)
