@@ -2,3 +2,4 @@ git clone git@github.com:ch11ng/exwm.git
 git clone git@github.com:ch11ng/xelb.git
 git clone git@github.com:ch11ng/exim.git
 git clone git@github.com:ch11ng/emacs-leim-extra.git
+git@github.com:cireu/fuz.el.git

@@ -94,6 +94,3 @@
 [submodule "site-lisp/libs/common-lisp-snippets"]
 	path = site-lisp/libs/common-lisp-snippets
 	url = git@github.com:mrkkrp/common-lisp-snippets.git
-[submodule "site-lisp/libs/fuz"]
-	path = site-lisp/libs/fuz
-	url = git@github.com:cireu/fuz.el.git
