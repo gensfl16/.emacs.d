@@ -1,13 +1,3 @@
-;; (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-
-;; (require 'init-elpa)
-;; (require 'init-module)
-
-;; (require-module "aweshell")
-;; (require-module "exwm")
-;; (require-module "xelb")
-;; (require-module "tao-theme")
-
 ;; ref: lazycat-emacs
 (defun add-subdirs-to-load-path (dir)
   "Recursive add directories to `load-path`."
@@ -28,29 +18,25 @@
     (require 'init-better)
     (require 'init-font)
     (require 'init-ui)
-    (require 'init-company)
+    (require 'init-im)
     (require 'init-key-bindings)
 
 
     (run-with-idle-timer
      1 nil
      #'(lambda ()
-	 (require 'init-im)
-	 (require 'init-snails)
 	 (require 'init-pdf-tools)
-	 ;; (require 'init-org)
+	 (require 'init-yasnippet)
+	 (require 'init-company)
+	 (require 'init-eglot)
+	 (require 'init-org)
 	 ;; (emacs-session-restore)
 	 ))))
 
 ;; (require 'init-exwm)
 ;; (require 'init-socks)
-;; (require 'init-sly)
-;; (require 'init-smex)
-;; (require 'init-company)
-;; (require 'init-yasnippet)
 ;; (require 'init-window-numbering)
 ;; (require 'init-ggtags)
 ;; (require 'init-lsp)
-;; (require 'init-eglot)
 
 (provide 'init)

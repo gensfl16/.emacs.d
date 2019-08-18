@@ -8,7 +8,7 @@
 (require 'lazy-load)
 
 (lazy-load-unset-keys
- '("C-z"))
+ '("C-z" "C-\\"))
 
 (lazy-load-global-keys
  '(
@@ -43,5 +43,32 @@
    ("s-g" . magit-status)
    )
  "init-magit")
+
+(lazy-load-global-keys
+ '(
+   ("M-x" . smex)
+   ("C-c C-c M-x" . execute-extended-command)
+   )
+ "init-smex")
+
+(lazy-load-global-keys
+ '(
+   ("C-\\" . toggle-input-method)
+   ("s-j" . pyim-convert-string-at-point)
+   )
+ "init-im")
+
+(lazy-load-global-keys
+ '(
+   ("s-y" . snails)
+   ("s-u" . snails-search-point)
+   )
+ "init-snails")
+
+(lazy-load-global-keys
+ '(
+   ("s-l" . sly)
+   )
+ "init-sly")
 
 (provide 'init-key-bindings)

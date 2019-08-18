@@ -1,13 +1,3 @@
-(when (executable-find "epdfinfo")
-  (require 'pdf-tools)
-  (require 'pdf-history)
-  (require 'pdf-occur)
-  (require 'pdf-links)
-  (require 'pdf-outline)
-  (require 'pdf-sync)
-  (require 'pdf-loader)
-  (pdf-loader-install))
-
 (require 'pdf-tools)
 (require 'pdf-history)
 (require 'pdf-occur)

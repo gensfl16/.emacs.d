@@ -22,6 +22,4 @@
 
 (setq pyim-punctuation-translate-p '(auto yes no))
 
-(global-set-key (kbd "s-j") 'pyim-convert-string-at-point)
-
 (provide 'init-im)
