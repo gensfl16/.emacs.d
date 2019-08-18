@@ -70,3 +70,30 @@
 [submodule "site-lisp/yasnippet"]
 	path = site-lisp/yasnippet
 	url = git@github.com:joaotavora/yasnippet.git
+[submodule "site-lisp/libs/auctex"]
+	path = site-lisp/libs/auctex
+	url = https://git.savannah.gnu.org/git/auctex.git
+[submodule "site-lisp/smex"]
+	path = site-lisp/smex
+	url = git@github.com:nonsequitur/smex.git
+[submodule "site-lisp/eglot"]
+	path = site-lisp/eglot
+	url = git@github.com:joaotavora/eglot.git
+[submodule "site-lisp/libs/flycheck"]
+	path = site-lisp/libs/flycheck
+	url = git@github.com:flycheck/flycheck.git
+[submodule "site-lisp/ggtags"]
+	path = site-lisp/ggtags
+	url = git@github.com:leoliu/ggtags.git
+[submodule "site-lisp/sly"]
+	path = site-lisp/sly
+	url = git@github.com:joaotavora/sly.git
+[submodule "site-lisp/libs/yasnippet-snippets"]
+	path = site-lisp/libs/yasnippet-snippets
+	url = git@github.com:AndreaCrotti/yasnippet-snippets.git
+[submodule "site-lisp/libs/common-lisp-snippets"]
+	path = site-lisp/libs/common-lisp-snippets
+	url = git@github.com:mrkkrp/common-lisp-snippets.git
+[submodule "site-lisp/libs/fuz"]
+	path = site-lisp/libs/fuz
+	url = git@github.com:cireu/fuz.el.git
