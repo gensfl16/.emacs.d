@@ -2,6 +2,20 @@
 (require 'common-lisp-snippets)
 ;; (require 'yasnippet-snippets)
 
+(defvar my-yasnippet-snippets-root
+  (expand-file-name "site-lisp/libs/yasnippet-snippets" user-emacs-directory)
+  "Root directory of yasnippet snippets.")
+
+(defun my-yasnippet-snippets-initialize ()
+  "Load `yasnippet-snippets' snippets directory."
+  (let ((dir (expand-file-name "snippets" my-yasnippet-snippets-root)))
+    (when (boundp 'yas-snippet-dirs)
+      (add-to-list 'yas-snippet-dirs dir t))
+    (yas-load-directory dir)))
+
+(eval-after-load 'yasnippet
+  '(my-yasnippet-snippets-initialize))
+
 (defun my/init-yasnippet ()
   (yas-minor-mode 1)
   (yas-reload-all)

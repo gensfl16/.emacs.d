@@ -1,5 +1,6 @@
 (require 'company)
 (require 'company-auctex)
+(require 'company-yasnippet)
 ;; (require 'auctex)
 ;; (require 'preview)
 ;; (require-package 'company-c-headers)

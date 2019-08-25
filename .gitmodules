@@ -88,9 +88,21 @@
 [submodule "site-lisp/sly"]
 	path = site-lisp/sly
 	url = git@github.com:joaotavora/sly.git
-[submodule "site-lisp/libs/yasnippet-snippets"]
-	path = site-lisp/libs/yasnippet-snippets
-	url = git@github.com:AndreaCrotti/yasnippet-snippets.git
 [submodule "site-lisp/libs/common-lisp-snippets"]
 	path = site-lisp/libs/common-lisp-snippets
 	url = git@github.com:mrkkrp/common-lisp-snippets.git
+[submodule "site-lisp/libs/xr"]
+	path = site-lisp/libs/xr
+	url = git@github.com:mattiase/xr.git
+[submodule "site-lisp/libs/yasnippet-snippets"]
+	path = site-lisp/libs/yasnippet-snippets
+	url = git@github.com:AndreaCrotti/yasnippet-snippets.git
+[submodule "site-lisp/libs/fuz"]
+	path = site-lisp/libs/fuz
+	url = git@github.com:cireu/fuz.el.git
+[submodule "site-lisp/one-themes"]
+	path = site-lisp/one-themes
+	url = git@github.com:balajisivaraman/emacs-one-themes.git
+[submodule "site-lisp/srcery-emacs"]
+	path = site-lisp/srcery-emacs
+	url = git@github.com:srcery-colors/srcery-emacs.git
