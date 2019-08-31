@@ -32,7 +32,7 @@
 (ido-mode 1) ;; ido
 
 ;; backup file
-(setq backup-directory-alist '(("." . "~/.emacs.d/.backups")))
+(setq backup-directory-alist '(("." . "~/.config/emacs/.backups")))
 
 ;; (add-to-list 'default-frame-alist '(font . "Noto Serif CJK SC ExtraLight-10"))
 

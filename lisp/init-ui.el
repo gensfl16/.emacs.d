@@ -1,7 +1,7 @@
 ;; (require 'lazycat-theme)
 
 ;; (add-to-list 'custom-theme-load-path (expand-file-name "site-lisp/one-themes" user-emacs-directory))
-(add-to-list 'custom-theme-load-path "~/.emacs.d/site-lisp/srcery-emacs")
+(add-to-list 'custom-theme-load-path (expand-file-name "site-lisp/srcery-emacs" user-emacs-directory))
 
 ;; (set-face-attribute 'default nil :font "DejaVu Sans Mono")
 ;; (set-face-attribute 'default nil :font "Droid Sans Mono")
