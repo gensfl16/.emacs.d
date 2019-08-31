@@ -12,11 +12,10 @@
 
   (with-temp-message (current-time-string)
 
-    (custom-set-faces
-     '(default ((t (:background "black" :foreground "#137D11")))))
+    ;; (custom-set-faces
+    ;;  '(default ((t (:background "black" :foreground "#137D11")))))
 
     (require 'init-better)
-    (require 'init-font)
     (require 'init-ui)
     (require 'init-im)
     (require 'init-key-bindings)

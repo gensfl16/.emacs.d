@@ -1,10 +1,16 @@
-;; (require 'tao-theme)
+;; (require 'lazycat-theme)
 
-;; (load "tao-yang-theme")
-;; (load-theme 'tao-yang t)
+;; (add-to-list 'custom-theme-load-path (expand-file-name "site-lisp/one-themes" user-emacs-directory))
+(add-to-list 'custom-theme-load-path "~/.emacs.d/site-lisp/srcery-emacs")
 
-;; (load-theme 'wombat t)
+;; (set-face-attribute 'default nil :font "DejaVu Sans Mono")
+;; (set-face-attribute 'default nil :font "Droid Sans Mono")
+;; (set-frame-font "Droid Sans Mono-14")
 
-(require 'lazycat-theme)
+(set-fontset-font t 'latin "Noto Sans")
+(set-fontset-font t 'han "Noto Sans CJK SC Regular")
+
+;; (load-theme 'one-dark t)
+(load-theme 'srcery t)
 
 (provide 'init-ui)
