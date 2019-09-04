@@ -71,4 +71,10 @@
    )
  "init-sly")
 
+(lazy-load-global-keys
+ '(
+   ("s-t" . el2log-generate-file)
+   )
+ "init-el2log")
+
 (provide 'init-key-bindings)

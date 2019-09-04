@@ -1,3 +1,5 @@
+(require 'cnfonts)
+;; (cnfonts-enable)
 ;; (require 'lazycat-theme)
 
 ;; (add-to-list 'custom-theme-load-path (expand-file-name "site-lisp/one-themes" user-emacs-directory))

@@ -5,4 +5,7 @@
 ;;  '((sh . t)
 ;;    ))
 
+(require 'org2ctex)
+;; (org2ctex-toggle t)
+
 (provide 'init-org)

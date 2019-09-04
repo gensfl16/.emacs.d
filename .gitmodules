@@ -106,3 +106,12 @@
 [submodule "site-lisp/srcery-emacs"]
 	path = site-lisp/srcery-emacs
 	url = git@github.com:srcery-colors/srcery-emacs.git
+[submodule "site-lisp/cnfonts"]
+	path = site-lisp/cnfonts
+	url = git@github.com:tumashu/cnfonts.git
+[submodule "site-lisp/el2org"]
+	path = site-lisp/el2org
+	url = git@github.com:tumashu/el2org.git
+[submodule "site-lisp/org2ctex"]
+	path = site-lisp/org2ctex
+	url = git@github.com:tumashu/org2ctex.git
