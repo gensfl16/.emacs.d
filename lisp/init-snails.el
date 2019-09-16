@@ -6,6 +6,8 @@
 
 (snails '(snails-backend-buffer
 	  snails-backend-recentf
+	  snails-backend-imenu
+	  snails-backend-current-buffer
 	  snails-backend-command))
 
 (provide 'init-snails)
