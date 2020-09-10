@@ -6,6 +6,8 @@
 
 我的系统是 Gentoo ，eamcs 版本是 emacs-vcs 27.0.9999。
 
+大半年没更新，以下内容需要修改。
+
 1) USE="X acl alsa cairo dynamic-loading gif gmp gpm imagemagick inotify jpeg lcms libxml2 motif png sound ssl svg threads tiff wide-int xft xpm zlib -Xaw3d (-aqua) -athena -dbus -games -gconf -gfile -gsettings -gtk -gtk2 -gzip-el -harfbuzz -json -kerberos -livecd -m17n-lib -mailutils (-selinux) -source -systemd -toolkit-scroll-bars -xwidgets" ABI_X86="(64)"
 2) dynamic-loading 使得 emacs 可以加载 .so 文件（fuz.el）。此外，emacs-27 使用 XDG 作为配置目录。
    即，原 ~/.emacs.d/init.el 变成 ~/.config/init.el
