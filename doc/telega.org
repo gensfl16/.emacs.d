@@ -1,0 +1,21 @@
+#+TITLE: telega.el 安装教程
+
+* tdlib
+
+#+BEGIN_SRC sh
+cd ~/.config/emacs/site-lisp/libs/td
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+cmake -DCMAKE_INSTALL_PREFIX=/home/shaofeng/.config/emacs/site-lisp/libs/td/build/INSTALL ..
+cmake --build .
+make install
+#+END_SRC
+
+* telega
+
+#+BEGIN_SRC sh
+cd ~/.config/emacs/site-lisp/telega
+make "LIBS_PREFIX=/home/shaofeng/.config/emacs/site-lisp/libs/td/build/INSTALL/"
+make install
+#+END_SRC
