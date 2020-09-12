@@ -118,3 +118,15 @@
 [submodule "site-lisp/libs/s"]
 	path = site-lisp/libs/s
 	url = git@github.com:magnars/s.el.git
+[submodule "site-lisp/telega"]
+	path = site-lisp/telega
+	url = git@github.com:zevlg/telega.el.git
+[submodule "site-lisp/libs/rainbow-identifiers"]
+	path = site-lisp/libs/rainbow-identifiers
+	url = git@github.com:Fanael/rainbow-identifiers.git
+[submodule "site-lisp/libs/visual-fill-column"]
+	path = site-lisp/libs/visual-fill-column
+	url = git@github.com:joostkremers/visual-fill-column.git
+[submodule "site-lisp/libs/td"]
+	path = site-lisp/libs/td
+	url = git@github.com:tdlib/td.git
