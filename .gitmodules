@@ -115,3 +115,6 @@
 [submodule "site-lisp/org2ctex"]
 	path = site-lisp/org2ctex
 	url = git@github.com:tumashu/org2ctex.git
+[submodule "site-lisp/libs/s"]
+	path = site-lisp/libs/s
+	url = git@github.com:magnars/s.el.git
