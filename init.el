@@ -29,6 +29,7 @@
 	 (require 'init-company)
 	 (require 'init-eglot)
 	 (require 'init-org)
+	 (require 'init-telega)
 	 ;; (emacs-session-restore)
 	 ))))
 
