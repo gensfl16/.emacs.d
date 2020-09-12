@@ -6,7 +6,9 @@
 (setq pyim-page-tooltip 'posframe)
 (setq pyim-page-length 5)
 (setq pyim-default-scheme 'wubi)
-(pyim-wbdict-v98-enable)
+(setq pyim-assistant-scheme 'quanpin)
+(pyim-wbdict-v86-enable)
+;; (pyim-wbdict-v98-morphe-enable)
 (setq default-input-method "pyim")
 
 (setq-default pyim-english-input-switch-functions
