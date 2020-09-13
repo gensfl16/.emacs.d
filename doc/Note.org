@@ -1,0 +1,82 @@
+#+TITLE: Note
+
+* 中文及输入法
+
+** 中文显示
+ - USE="xft" emerge emacs
+
+** 输入法
+ 1) emacs 输入法问题
+   - emerge -av font-adobe-75dpi （原因不知道，想在 emacs 中使用输入法，无论是 fcitx 还是 ibus，都得安装这个包）
+   - emacs --daemon 问题，如果是系统启动，无法使用输入法，没进入桌面时启动也无法使用，原因是启动 emacs 时，环境变量没
+     设置（XMODIFIERS=@im=fcitx），在 emacs --daemon 启动后，使用 setenv 设置，环境变量设置成功，但依旧无效。
+     - 解决方法：/etc/conf.d/emacs.<user> 添加 "export XMODIFIERS=@im=fcitx"，一定要有 export
+
+ 2) fcitx
+   - ~/.config/fcitx 中 config 和 profile 配置，要确定修改成功，遇到这样情形，修改完后会被改回来，原因估计
+     是 fcitx 已经启动，然后恢复的（但有时是可以的，所以这个原因不是那么肯定）
+   - config 中，调用输入法映射到 s-SPC ，与 C-SPC 相区分，将 CTRL_SPACE 修改成 SUPER_SPACE
+   - profile 列表中，将 wubi 后面的 False 改成 True
+
+ 3) ibus
+   - 使用 exwm 时，fcitx 有问题，加载 exwm 后无法使用 fcitx，不加载时可以使用，因此使用 ibus
+   - 最终选择 ibus-rime
+     1) 在 [[xinitrc][~/.xinitrc]] 中加入 "ibus-daemon -drx"，用于启动 ibus，在 exwm 配置文件中启动有问题
+     2) 执行 ibus-setup ，添加 Chinese/rime 以及 English
+     3) 将 [[default.custom.yaml][patch]] ，放入 ~/.config/ibus/rime/ 目录，ibus 重启即可使用 wubi86
+
+ 4) exim
+    - 安装相应插件，.xinitrc 中使用 exim 和 xim
+
+** 参考
+ 1. [[https://wiki.archlinux.org/index.php/Fcitx#Emacs][Archlinux 上有关 emacs 使用 Fcitx 的说明]]
+ 2. [[http://tieba.baidu.com/p/3381050974][贴吧上有关解释与解决方法]]
+
+* No Cask 安装 pdf-tools
+
+  1) git clone ...
+  2) cd pdf-tools
+  3) cd server
+  4) bash autogen.sh
+  5) bash configure
+  6) cd ..
+  7) make -C server
+  8) cp server/epdfinfo lisp/
+
+* auctex 安装
+  1) cd ~/.config/emacs/site-lisp/libs/auctex
+  2) bash autogen.sh
+  3) ./configure --prefix=/home/USER/.config/emacs/site-lisp/libs/auctex
+  4) make
+
+* telega.el 安装
+
+** tdlib
+
+ #+BEGIN_SRC sh
+ cd ~/.config/emacs/site-lisp/libs/td
+ mkdir build
+ cd build
+ cmake -DCMAKE_BUILD_TYPE=Release ..
+ cmake -DCMAKE_INSTALL_PREFIX=/home/USER/.config/emacs/site-lisp/libs/td/build/INSTALL ..
+ cmake --build .
+ make install
+ #+END_SRC
+
+** telega
+
+ #+BEGIN_SRC sh
+ cd ~/.config/emacs/site-lisp/telega
+ make "LIBS_PREFIX=/home/USER/.config/emacs/site-lisp/libs/td/build/INSTALL/"
+ make install
+ #+END_SRC
+
+* fuz 安装（配合 snails 使用插件）
+
+  有包编译需要环境变量 LIBCLANG_PATH，这个在 emacs shell 中默认没有，可以通过其他方式加入，然后直接使用
+  配置文件中已经写好的配置，即可完成编译。否则，可以先执行以下命令后再执行配置文件（这里即启动 snails）：
+
+  #+BEGIN_SRC sh
+  cd ~/.config/emacs/site-lisp/libs/fuz
+  cargo build --release
+  #+END_SRC
