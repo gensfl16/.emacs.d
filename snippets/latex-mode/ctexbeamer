@@ -1,0 +1,45 @@
+# -*- mode: snippet -*-
+# name: full template of ctex beamer class
+# key: ctexbeamer
+# --
+\documentclass{ctexbeamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{subcaption}
+%% \usepackage{biblatex}
+%% \addbibresource{cite.bib}
+
+\usetheme{${1:Madrid}}
+
+\begin{document}
+
+\author{$2}
+\title{$3}
+\institute{$4}
+\date{\today}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{CONTENTS}
+    \tableofcontents[currentsection, currentsubsection]
+  \end{frame}
+}
+
+\AtBeginSubsection[]
+{
+  \begin{frame}
+    \frametitle{CONTENTS}
+    \tableofcontents[currentsection, currentsubsection]
+  \end{frame}
+}
+
+\begin{frame}[plain]
+  \maketitle
+\end{frame}
+
+$0
+\end{document}
