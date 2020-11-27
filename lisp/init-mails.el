@@ -11,8 +11,8 @@
 (setq send-mail-function 'smtpmail-send-it
       message-send-mail-function 'smtpmail-send-it)
 
-(setq smtpmail-debug-info t
-      smtpmail-debug-verb t)
+;; (setq smtpmail-debug-info t
+;;       smtpmail-debug-verb t)
 
 (setq saved-stream-type smtpmail-stream-type
       saved-auth-supported smtpmail-auth-supported)
