@@ -15,6 +15,7 @@
     ;; (custom-set-faces
     ;;  '(default ((t (:background "black" :foreground "#137D11")))))
 
+    (require 'init-private)
     (require 'init-better)
     (require 'init-ui)
     (require 'init-im)
@@ -30,6 +31,7 @@
 	 (require 'init-eglot)
 	 (require 'init-org)
 	 (require 'init-telega)
+	 (require 'init-mails)
 	 ;; (emacs-session-restore)
 	 ))))
 

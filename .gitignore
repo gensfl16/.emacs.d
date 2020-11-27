@@ -12,6 +12,7 @@ tramp
 /backup/
 /recentf
 /site-lisp/magit/
+/lisp/init-private.el
 
 ido.last
 smex-items
