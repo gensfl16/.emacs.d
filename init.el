@@ -32,6 +32,7 @@
 	 (require 'init-org)
 	 (require 'init-telega)
 	 (require 'init-mails)
+	 (require 'init-gnus)
 	 ;; (emacs-session-restore)
 	 ))))
 

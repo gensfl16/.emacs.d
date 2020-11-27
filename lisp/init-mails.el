@@ -3,8 +3,10 @@
 
 ;; (setq auth-sources '("path-of-authinfo"))
 ;; (setq user-full-name full-name)
+
+;; SMTP config
 ;; (setq smtp-accounts
-;;       '(([plain | login | cram-md5 | ssl] from-addr server port user)))
+;;       '((mech[plain | login | cram-md5 | ssl] from-addr server port user)))
 
 (setq send-mail-function 'smtpmail-send-it
       message-send-mail-function 'smtpmail-send-it)
