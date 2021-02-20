@@ -65,11 +65,11 @@
    )
  "init-snails")
 
-(lazy-load-global-keys
- '(
-   ("s-l" . sly)
-   )
- "init-sly")
+;; (lazy-load-global-keys
+;;  '(
+;;    ("s-l" . sly)
+;;    )
+;;  "init-sly")
 
 (lazy-load-global-keys
  '(

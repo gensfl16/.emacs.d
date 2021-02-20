@@ -19,6 +19,7 @@
     (require 'init-better)
     (require 'init-ui)
     (require 'init-im)
+    (require 'init-sly)
     (require 'init-key-bindings)
 
 
