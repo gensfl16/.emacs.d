@@ -15,7 +15,7 @@
 	url = git@github.com:manateelazycat/lazy-load.git
 [submodule "site-lisp/pdf-tools"]
 	path = site-lisp/pdf-tools
-	url = git@github.com:politza/pdf-tools.git
+	url = git@github.com:vedang/pdf-tools.git
 [submodule "site-lisp/libs/tablist"]
 	path = site-lisp/libs/tablist
 	url = git@github.com:politza/tablist.git
